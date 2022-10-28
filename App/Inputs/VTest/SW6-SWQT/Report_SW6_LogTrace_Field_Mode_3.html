@@ -1,0 +1,3986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Test Configuration 1</title>
+    <style type="text/css">
+      
+       
+      
+      @media screen
+      {
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+      }
+  
+      
+      @media print
+      {
+        
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+        
+        
+        a
+        {
+          text-decoration: none;
+        }
+        
+        
+        .HeadingTable, .SubHeadingTable, .GroupHeadingTable , .GroupEndTable
+        {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .ResultBlockHeading
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        table.ResultTable, table.OverviewTable, table.CheckStatisticsTable
+        {
+          border-collapse: collapse;
+        }
+        
+        td.DefaultCell, td.DefineCell, td.NumberCell, td.NumberCellPositiveResult, td.NumberCellNegativeResult, 
+        td.NumberCellErrorResult, td.NumberCellInconclusiveResult, td.NumberCellNoneResult, td.NumberCellNoColor,
+        td.PositiveResultCell, td.NegativeResultCell, td.WarningCell, td.NoneResultCell, td.InconclusiveResultCell,
+        td.ErrorResultCell, th.TableHeadingCell
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .PatternSeparator
+        {
+          
+          border-style: none;
+        }
+        
+        .PositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NoneResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .InconclusiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .ErrorResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+
+        
+        .TestcaseHeadingDefaultResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingPositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingNegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        table.ScreenOnly, a.Undecorated, .LinkCell
+        {
+          display: none;
+        }
+      }
+      
+      a.Undecorated:hover 
+      {
+        color:red;
+      }
+      a.Undecorated
+      { 
+        text-decoration: none; 
+      }
+      
+      .NavStyle
+      {
+        background-color: rgb(220, 221, 222);
+      }
+      
+      td.LinkCell, td.UpCell
+      {
+        
+        width:              1px;
+        white-space:        nowrap;
+      }
+
+      
+      table
+      {
+        margin-bottom:    10px;
+        vertical-align:   top; 
+        border:           0;
+        border-spacing:   1px;
+        padding:          2px;
+      }
+      table.ScreenOnly
+      {
+        vertical-align: top; 
+        margin-bottom:  10px;
+      }
+      .NoMarginBottom
+      {
+        margin-bottom:    0px;
+      }
+      .HeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    30px;
+        margin-left:      auto;
+        margin-right:     auto;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .SubHeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    25px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .GroupHeadingTable, .GroupEndTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        padding-right:    20px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .DefaultTable
+      {
+        padding:        0px;
+        border-spacing: 0px;
+      }
+      
+      .CheckStatisticsTable
+      {
+        margin-bottom: 8px;
+        padding-right:  20px;
+      }
+  
+      .OverviewTable
+      {
+        text-align:     left;
+      }
+      
+      .OverviewResultTable
+      {
+        width:          100%;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+        padding:        0px;
+        text-align:     center;
+      }
+      
+      .ResultTable
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  20px;
+      }
+      
+      .ResultTableInner
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+      }
+  
+      table.ResultTable td, table.ChildLinkTable td
+      {
+        vertical-align: top;
+      }
+      .ChildLinkTable
+      {
+        width:          1px;
+        text-align:     left;
+      }
+      .InfoTable
+      {
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .InfoTableExpand
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .OverallResultTable
+      {
+        width:         50%;
+        text-align:    center;
+        margin-bottom: 20px;
+        margin-left:   auto;
+        margin-right:  auto;
+        font-weight:   bold;
+      }
+      
+      .TableHeadingCell
+      {
+        background-color: rgb(179, 179, 179);
+        font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        font-weight:      bold;
+        text-align:       center;
+      }
+  
+      .CellNoColor
+      {
+        text-align:     left;
+        vertical-align: top;
+      }   
+      
+      .DefineCell
+      {
+        background-color: rgb(179, 179, 179);
+        text-align:       left;
+      }
+      
+      .DefaultCell, .DefaultCellBold
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       left;
+      }
+      
+      .DefaultCellBold
+      {
+        font-weight:      bold;
+      }
+        
+      .NumberCell
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoColor
+      {        
+        text-align: center;
+      }
+      
+      .PositiveResultCell
+      {
+        background-color: rgb(25, 165, 88);
+      }
+    
+      .NegativeResultCell
+      {
+        background-color: rgb(240, 0, 0);
+      }
+      
+      .NoneResultCell
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      
+      .InconclusiveResultCell
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      
+      .ErrorResultCell
+      {
+        background-color: rgb(205, 0, 0);
+        white-space:        nowrap;
+      }
+
+      .WarningCell
+      {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .TestcaseHeadingDefaultResult
+      {
+        background-color: rgb(179, 179, 179);
+      }
+      .TestcaseHeadingPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+      }      
+      .TestcaseHeadingNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+      }      
+      .TestcaseHeadingNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      .TestcaseHeadingInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      .TestcaseHeadingErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+      }
+      
+      .PatternSeparator
+      {
+        height: 0.2em;
+      }
+      
+      .NegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .PositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .NoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .InconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .ErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      
+      
+      
+      .Heading1
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   26px;
+      }
+      
+      .Heading2
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   20px;
+      }
+      
+      .Heading3
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     18px;
+        margin-bottom: 20px;
+        margin-top:    20px;
+      }
+      
+      .Heading4
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     16px;
+        margin-top:    10px;
+        margin-bottom: 10px;
+      }
+      
+      
+      img
+      {
+        Margin-bottom: 10px;
+        Margin-right:  10px;
+      }
+      
+      
+      p
+      {
+        Margin-bottom: 20px;
+      }
+      
+      
+      .DefaultTableBackground
+      {
+        background-color: rgb(229, 229, 229);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NegativeResultBackground
+      {
+        background-color: rgb(240, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .PositiveResultBackground
+      {
+        background-color: rgb(25, 165, 88);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .WarningResultBackground
+      {
+        background-color: rgb(255, 255, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NoneResultBackground
+      {
+        background-color: rgb(105, 105, 105);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .InconclusiveResultBackground
+      {
+        background-color: rgb(255, 165, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .ErrorResultBackground
+      {
+        background-color: rgb(205, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .TestGroupHeadingBackground
+      {
+        background-color: rgb(179, 179, 179);
+      }
+    
+      
+      .Indentation
+      {
+        margin-left:  20px;
+      }
+    </style>
+    <script type="text/javascript">
+      var EXPANDED = '[−]';
+      var COLLAPSED = '[+]';
+      var VISIBLE = 'Visible';
+      var HIDDEN = 'Hidden';
+      var NONE = 'none';
+      var BLOCK = '';
+      function getDivId(id) { return 'div_' + id; }
+      function getLinkId(id) { return 'lnk_' + id; }
+      function getTableId(id) { return 'tbl_' + id; }
+      function getTbl2Id(id) { return 'tbl_t' + id; }
+      
+      
+      function switchText(oldText) { return oldText == COLLAPSED ? EXPANDED : COLLAPSED ; }
+      function getStyleFromText(linkText) { return linkText == COLLAPSED ? HIDDEN : VISIBLE; }
+      
+      function getElements(tagName, elementId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        var len = elm.length;
+        for (var i = 0; i < len; i++) 
+        {
+          var id = elm[i].id;
+          if (id && id.indexOf(elementId) == 0)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;
+      }
+      function matchElements(tagName, matchId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        for (var i = 0; i < elm.length; i++) 
+        {
+          var id = elm[i].id;
+          var tc = id.replace(/s[0-9]+\./, "");
+          if (tc && tc == matchId)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;  
+      }
+      function onoff(elm, style)
+      {
+        if(elm.style.display == NONE)
+        {
+          if(style == null || style == VISIBLE)
+            elm.style.display = BLOCK;
+        }
+        else
+        {
+          if(style == null || style == HIDDEN)
+            elm.style.display = NONE;
+        }
+      }
+      function switchTagStyle(tag, id, style)
+      {
+        var divs = getElements(tag, id);
+        for(var i = 0; i < divs.length; i++)
+          onoff(divs[i], style);
+      }
+      function switchRowStyle(tbl, style)
+      {
+        var rows = tbl.rows.length;
+        for(var rowIndex=0; rowIndex < rows; rowIndex++)
+        {
+          var row = tbl.rows[rowIndex];
+          if (row.id != "on")
+            onoff(row, style);
+        }
+      }
+      function switchTableRowStyle(tableId, style)
+      {
+        var tables = getElements('table', tableId);
+        for(var i = 0; i < tables.length; i++)
+          switchRowStyle(tables[i], style);
+      }
+      function switchLinkText(linkId, newText)
+      {
+        var link = getElements('a', linkId);
+        var len = link.length;
+        for(var i = 0; i < len; i++)
+        {
+          var lnk = link[i];
+          if(newText == null)
+          {
+            var oldText = lnk.text;
+            newText = switchText(oldText)
+          }
+          lnk.text = newText;
+        }
+      }
+      function switchTag(tag, id, text)
+      {
+        var style = getStyleFromText(text);
+        switchTagStyle(tag, id, style);
+      }
+      function switchTable(id)
+      {
+        switchLinkText(getTableId(id));
+        switchTableRowStyle(getTableId(id));
+      }
+      function switchDiv(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+      }      
+      function switchAll(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+        var style = getStyleFromText(text);
+        switchTableRowStyle(getTbl2Id(id), style);
+      }
+      function showTable(id)
+      {
+        var tableId = getTableId(id);
+        switchLinkText(tableId, EXPANDED);
+        switchTableRowStyle(tableId, VISIBLE);
+      }
+      function hideTable(id)
+      {
+        var tableId = getTableId(id);
+        switchTableRowStyle(tableId, HIDDEN);
+        switchLinkText(tableId, COLLAPSED);
+      }
+      function showDiv(id)
+      {
+        switchLinkText(getLinkId(id), EXPANDED);
+        switchTag('div', getDivId(id), EXPANDED);
+      }
+      function showTC(id)
+      {
+        var divId = getDivId(id);
+        var elms = matchElements('div', divId); 
+        if(elms != null && elms.length > 0)
+        {
+          id = elms[0].id.replace(getDivId(''), '');
+          showDiv(id);
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <a name="TOP"></a>
+    <table class="HeadingTable">
+      <tr>
+        <td>
+          <big class="Heading1">Report: Test Configuration 1</big>
+        </td>
+      </tr>
+    </table>
+    <center>
+      <table class="OverallResultTable">
+        <tr>
+          <td class="PositiveResult">Test passed</td>
+        </tr>
+      </table>
+    </center>
+    <a name="GeneralTestInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">General Test Information</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <div class="Heading4">Tester</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Windows Login Name: </td>
+            <td class="CellNoColor">XTENV14.MEESYS</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Setup</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor">CANoe.Ethernet.AMD/XCP 11.0.96 (SP4)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Configuration: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Customer\AutoEthSim_2021_KW29_SP21_C11\ME_L2G8810_Lidar_SP2021_SWQT.cfg</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database Ethernet3 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Customer\AutoEthSim_2021_KW29_SP21_C11\Databases\MERGED_FBX412_SP2021_21KW29_V89_Ethernet3_V90_lokal.xml (2021-11-03 12:41:33)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_CanoeControl_2 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_CanoeControl_2.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Diagnosis_3 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Diagnosis_3.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_DltViewer42gen_XXXXXXXX on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_DltViewer42gen_XXXXXXXX.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_DltViewer_42 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_DltViewer_42.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_EtherStress_77 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_EtherStress_77.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_MeasurementSetupMapping_51 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_MeasurementSetupMapping_51.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Relaycard_50 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Relaycard_50.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_VehicleInterface_1 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_VehicleInterface_1.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Xcp_15 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Xcp_15.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Diagnostic Description of LIDAR_01: </td>
+            <td class="CellNoColor">LIDAR_01, ODX:LIDAR_01*C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Diagnostics\G070_DKC_LIDAR__01.002_004_001.pdx</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Configuration: </td>
+            <td class="CellNoColor">Test Configuration 1</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Windows Computer Name: </td>
+            <td class="CellNoColor">MEEDTXTENV14</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module SomeIP_IL: </td>
+            <td class="CellNoColor">SOME/IP Interaction Layer for CANoe, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\SomeIP_IL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module AVB_IL: </td>
+            <td class="CellNoColor">Vector CANoe/CANalyzer Runtime Kernel, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\RuntimeKernel.exe</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module Ethernet_IL: </td>
+            <td class="CellNoColor">Ethernet Interaction Layer for CANoe, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\Ethernet_IL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module J1939TestServiceLibraryNL: </td>
+            <td class="CellNoColor">J1939 Test Service Library for CANoe, Version 11.0.96.0, C:\Program Files\Vector CANoe 11.0\Exec32\J1939TestServiceLibraryNL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module CANstress_NL: </td>
+            <td class="CellNoColor">CANstress NodeLayer for CANoe Version 3.0.15, C:\Program Files\Vector CANoe 11.0\Exec32\CANstress_NL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module FRStressNL: </td>
+            <td class="CellNoColor">FRstress NL Version 1.0.27, C:\Program Files\Vector CANoe 11.0\Exec32\FRStressNL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module C2X_IL: </td>
+            <td class="CellNoColor">Car2x Interaction Layer for Vector CANalyzer.Car2x/CANoe.Car2x, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\C2X_IL.dll</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestOverview"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Overview</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <table class="DefaultTable">
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test begin: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:55:58</td>
+          <td class="CellNoColor">(logging timestamp 1859.583885)</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test end: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:56:04</td>
+          <td class="CellNoColor" nowrap>(logging timestamp 1866.030385)</td>
+        </tr>
+      </table>
+      <div class="Heading4">Statistics</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">Executed test cases </td>
+            <td class="NumberCell" width="60">2</td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases passed </td>
+            <td class="NumberCellPositiveResult">2</td>
+            <td class="NumberCellPositiveResult">100% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases inconclusive</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases failed </td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases with error in test system </td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Number of failures outside of test cases</td>
+            <td class="NumberCell"></td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Inconclusive</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Fail</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Error in test system</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Not executed test cases </td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr class="DefaultCell" style="text-indent: 20px;">
+            <td colspan="3">Some elements were not executed because they were deactivated by the tester.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Results</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">1</td>
+            <td class="DefineCell">
+              <b>
+                <a href="#i__28107024_8">SW6_LogTrace</a>
+              </b>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">
+              <b>1.1</b>
+            </td>
+            <td class="DefineCell">
+              <a href="#i__28107024_14">
+                <b>LogTrace_Main</b>
+              </a>
+            </td>
+            <td style="padding:0px;" class="DefineCell" colspan="2"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefineCell"><b>DLT</b></td>
+            <td class="DefineCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">
+              <b>1.1.1</b>
+            </td>
+            <td class="DefineCell">
+              <a href="#i__28107024_30">
+                <b>SecureDebugInterfaces_DLT_XCP</b>
+              </a>
+            </td>
+            <td style="padding:0px;" class="DefineCell" colspan="2"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">
+              <b>1.1.1.1</b>
+            </td>
+            <td class="DefineCell">
+              <a href="#i__28107024_34">
+                <b>Field_Mode</b>
+              </a>
+            </td>
+            <td style="padding:0px;" class="DefineCell">
+              <table class="OverviewResultTable">
+                <tr>
+                  <td class="PositiveResultCell" width="100%">2</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1.1.1.1.1</td>
+            <td class="DefaultCell">
+              <a href="#i__28107024_38">SW6_9859713_Field_Mode_SettingInitialCondition</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1.1.1.1.2</td>
+            <td class="DefaultCell">
+              <a href="#i__28107024_3253">SW6_9859715_Field_Mode_PersistencyAfterReset</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859717_Field_Mode_DeactivateDLTandXCP_WithoutSFATokens</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859719_Field_Mode_ActivateDeactivateDLTandXCPSuccessively_WithoutSFATokens</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859721_Field_Mode_LockFlagActivation_StatusDLTandXCP</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859723_Field_Mode_LockFlag_DLTandXCP_PersistencyAfterReset</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859725_Field_Mode_LockFlag_ActivateDeactivateDLTandXCP_WithoutSFATokens</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859727_Field_Mode_LockFlag_ActivateDeactivateDLTandXCP_WithSFATokens</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859729_Field_Mode_LockFlag_DLTandXCP_SFATokens_PersistencyAfterReset</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW6_9859731_Field_Mode_LockFlag_SFATokens_ActivateDeactivateSuccessivelyDLTandXCP</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefineCell"><b>Plant_Mode</b></td>
+            <td class="DefineCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefineCell"><b>Engineering_Mode</b></td>
+            <td class="DefineCell">not executed</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestModuleInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Configuration Information</div>
+        </td>
+      </tr>
+    </table>
+    <a name="i__28107024_1"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <big class="Heading2">Test Case Details</big>
+        </td>
+      </tr>
+    </table>
+    <table class="GroupHeadingTable">
+      <tr height="20px"></tr>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1" href="javascript:switchAll('1',document.all['lnk_1'].text)">[−]</a>
+        </td>
+        <td>
+          <big class="Heading3">
+            <a name="i__28107024_8">1 Test Unit: SW6_LogTrace</a>
+          </big>
+        </td>
+      </tr>
+      <tr height="20px"></tr>
+    </table>
+    <div id="div_1">
+      <div class="Heading4">General Information</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Name: </td>
+            <td class="CellNoColor">SW6_LogTrace</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Description: </td>
+            <td class="CellNoColor"></td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor"></td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">File: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\SW6_LogTrace_XCP_Scos\SW6_LogTrace\SW6_LogTrace.vtuexe</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Last modification: </td>
+            <td class="CellNoColor">2022-02-21, 14:46:05</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table class="GroupHeadingTable">
+      <tr>
+        <td class="LinkCell" rowspan="1">
+          <a class="Undecorated" id="lnk_1.1" href="javascript:switchAll('1.1',document.all['lnk_1.1'].text)">[−]</a>
+        </td>
+        <td rowspan="2">
+          <big class="Heading3">
+            <a name="i__28107024_14">1.1 Test Group: LogTrace_Main</a>
+          </big>
+        </td>
+      </tr>
+    </table>
+    <div id="div_1.1">
+      <div class="Indentation"></div>
+    </div>
+    <table class="GroupHeadingTable">
+      <tr>
+        <td class="LinkCell" rowspan="1">
+          <a class="Undecorated" id="lnk_1.1.1" href="javascript:switchAll('1.1.1',document.all['lnk_1.1.1'].text)">[−]</a>
+        </td>
+        <td rowspan="2">
+          <big class="Heading3">
+            <a name="i__28107024_30">1.1.1 Test Group: SecureDebugInterfaces_DLT_XCP</a>
+          </big>
+        </td>
+      </tr>
+    </table>
+    <div id="div_1.1.1">
+      <div class="Indentation"></div>
+    </div>
+    <table class="GroupHeadingTable">
+      <tr>
+        <td class="LinkCell" rowspan="2">
+          <a class="Undecorated" id="lnk_1.1.1.1" href="javascript:switchAll('1.1.1.1',document.all['lnk_1.1.1.1'].text)">[−]</a>
+        </td>
+        <td rowspan="2">
+          <big class="Heading3">
+            <a name="i__28107024_34">1.1.1.1 Test Group: Field_Mode</a>
+          </big>
+        </td>
+        <td width="1px;" nowrap>Test Case Verdicts</td>
+      </tr>
+      <tr>
+        <td style="padding:0px;" width="1px">
+          <table class="OverviewResultTable">
+            <tr>
+              <td class="PositiveResultCell" width="100%">2</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div id="div_1.1.1.1">
+      <div class="Indentation"></div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1.1.1.1.1" href="javascript:switchAll('1.1.1.1.1',document.all['lnk_1.1.1.1.1'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">1.1.1.1.1 <a name="i__28107024_38">SW6_9859713_Field_Mode_SettingInitialCondition</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1.1.1.1.1">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:55:58</td>
+            <td class="CellNoColor">(logging timestamp 1859.583885)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:55:59</td>
+            <td class="CellNoColor" nowrap>(logging timestamp 1860.250385)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('1.1.1.1.1_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('1.1.1.1.1_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">1. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.583885</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the ECU is in Field Mode</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">2. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.583885</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.583885</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.596385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=12.5ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.596385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.596385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_130" href="javascript:switchTable('1.1.1.1.1_i__28107024_130')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_130">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">ECUMODES_READ_MODE</td>
+                  <td class="DefaultCell">80 02 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.596385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=104ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_264" href="javascript:switchTable('1.1.1.1.1_i__28107024_264')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_264">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">ECUMODES_READ_MODE</td>
+                  <td class="DefaultCell">80 02 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_ECU_MODE_TYPE_SUBTYPE_DATA</td>
+                  <td class="DefaultCell">0x00 0x00</td>
+                  <td class="DefaultCell">00 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_ECU_MODE</td>
+                  <td class="DefaultCell">Field Mode</td>
+                  <td class="DefaultCell">02 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_450" href="javascript:switchTable('1.1.1.1.1_i__28107024_450')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_450">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[5] 80 02 00 00 02</td>
+                  <td class="DefaultCell">[5] 80 02 00 00 02</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">3. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the Lock Flag is not set</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">4. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.710385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.710385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.710385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_616" href="javascript:switchTable('1.1.1.1.1_i__28107024_616')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_616">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_SUPPLIER_MANUFACTURING_LOCK_SETTINGS</td>
+                  <td class="DefaultCell">44 66 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.710385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=101ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_750" href="javascript:switchTable('1.1.1.1.1_i__28107024_750')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_750">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_SUPPLIER_MANUFACTURING_LOCK_SETTINGS</td>
+                  <td class="DefaultCell">44 66 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_LOCK_STATUS_WERT</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_915" href="javascript:switchTable('1.1.1.1.1_i__28107024_915')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_915">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 44 66 00</td>
+                  <td class="DefaultCell">[3] 44 66 00</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">5. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if SFA token for DLT is not installed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">6. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.811385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.820385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=9ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.820385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.820385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_1081" href="javascript:switchTable('1.1.1.1.1_i__28107024_1081')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_1081">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl</td>
+                  <td class="DefaultCell">0x31</td>
+                  <td class="DefaultCell">31 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SuppressPositiveResponseMessageIndicationBit</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndRoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">FEATURE_ID</td>
+                  <td class="DefaultCell">0x00 0x1D 0x1A</td>
+                  <td class="DefaultCell">00 1d 1a </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">VERBOSE</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.820385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_1299" href="javascript:switchTable('1.1.1.1.1_i__28107024_1299')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_1299">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl Response ID</td>
+                  <td class="DefaultCell">0x71</td>
+                  <td class="DefaultCell">71 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndStatusRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">STAT_SFA_READ_STATUS</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">__SwitchKey__</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_SFA_READ_STATUS_MUX</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_ID_DATA</td>
+                  <td class="DefaultCell">0x1D 0x1A 0x00</td>
+                  <td class="DefaultCell">1d 1a 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_STATUS</td>
+                  <td class="DefaultCell">EXPIRED</td>
+                  <td class="DefaultCell">03 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RC_STEUERN_ROUTINE_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_1538" href="javascript:switchTable('1.1.1.1.1_i__28107024_1538')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_1538">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RCT'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RID_SR/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1A 00 03</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1A 00 03</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">7. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if SFA token for XCP is not installed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">8. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.920385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.930385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.930385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.930385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_1735" href="javascript:switchTable('1.1.1.1.1_i__28107024_1735')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_1735">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl</td>
+                  <td class="DefaultCell">0x31</td>
+                  <td class="DefaultCell">31 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SuppressPositiveResponseMessageIndicationBit</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndRoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">FEATURE_ID</td>
+                  <td class="DefaultCell">0x00 0x1D 0x1B</td>
+                  <td class="DefaultCell">00 1d 1b </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">VERBOSE</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1859.930385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=101ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_1953" href="javascript:switchTable('1.1.1.1.1_i__28107024_1953')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_1953">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl Response ID</td>
+                  <td class="DefaultCell">0x71</td>
+                  <td class="DefaultCell">71 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndStatusRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">STAT_SFA_READ_STATUS</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">__SwitchKey__</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_SFA_READ_STATUS_MUX</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_ID_DATA</td>
+                  <td class="DefaultCell">0x1D 0x1B 0x00</td>
+                  <td class="DefaultCell">1d 1b 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_STATUS</td>
+                  <td class="DefaultCell">EXPIRED</td>
+                  <td class="DefaultCell">03 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RC_STEUERN_ROUTINE_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2192" href="javascript:switchTable('1.1.1.1.1_i__28107024_2192')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_2192">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RCT'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RID_SR/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1B 00 03</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1B 00 03</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">9. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the status of Current User Request for Secure DLT is Activated</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">10. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.031385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.040385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=9ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.040385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.040385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2389" href="javascript:switchTable('1.1.1.1.1_i__28107024_2389')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_2389">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_DLT_ONOFF</td>
+                  <td class="DefaultCell">41 0a </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.040385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2523" href="javascript:switchTable('1.1.1.1.1_i__28107024_2523')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_2523">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_DLT_ONOFF</td>
+                  <td class="DefaultCell">41 0a </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_DLT_STATUS_WERT</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2688" href="javascript:switchTable('1.1.1.1.1_i__28107024_2688')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_2688">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 41 0A 01</td>
+                  <td class="DefaultCell">[3] 41 0A 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">11. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the status of Current User Request for Secure XCP is Activated</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">12. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.140385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.150385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.150385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.150385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2854" href="javascript:switchTable('1.1.1.1.1_i__28107024_2854')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_2854">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_XCP_ONOFF</td>
+                  <td class="DefaultCell">40 c7 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.150385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_2988" href="javascript:switchTable('1.1.1.1.1_i__28107024_2988')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.1_i__28107024_2988">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_XCP_ONOFF</td>
+                  <td class="DefaultCell">40 c7 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_XCP_STATUS_WERT</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.1_i__28107024_3153" href="javascript:switchTable('1.1.1.1.1_i__28107024_3153')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.1_i__28107024_3153">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 40 C7 01</td>
+                  <td class="DefaultCell">[3] 40 C7 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1.1.1.1.2" href="javascript:switchAll('1.1.1.1.2',document.all['lnk_1.1.1.1.2'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">1.1.1.1.2 <a name="i__28107024_3253">SW6_9859715_Field_Mode_PersistencyAfterReset</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1.1.1.1.2">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:55:59</td>
+            <td class="CellNoColor">(logging timestamp 1860.250385)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-18 08:56:04</td>
+            <td class="CellNoColor" nowrap>(logging timestamp 1866.030385)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('1.1.1.1.2_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('1.1.1.1.2_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">1. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Perform ECU Reset</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">2. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.250385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/ER_STEUERGERAETE_RESET/ER_STEUERGERAETE_RESET_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.260385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.260385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.260385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_3345" href="javascript:switchTable('1.1.1.1.2_i__28107024_3345')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/ER_STEUERGERAETE_RESET/ER_STEUERGERAETE_RESET_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_3345">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">EcuReset</td>
+                  <td class="DefaultCell">0x11</td>
+                  <td class="DefaultCell">11 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">hardReset</td>
+                  <td class="DefaultCell">0x01</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.260385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.360385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.360385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_3446" href="javascript:switchTable('1.1.1.1.2_i__28107024_3446')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/ER_STEUERGERAETE_RESET/ER_STEUERGERAETE_RESET_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_3446">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">EcuReset</td>
+                  <td class="DefaultCell">0x51</td>
+                  <td class="DefaultCell">51 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">hardReset</td>
+                  <td class="DefaultCell">0x01</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1860.360385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">3. Wait: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.360385</td>
+            <td class="NumberCell">1</td>
+            <td class="DefaultCell">Waited for 5.000 s</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">4. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.360385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the ECU remains in Field Mode</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">5. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.360385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.360385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.370385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.370385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.370385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_3649" href="javascript:switchTable('1.1.1.1.2_i__28107024_3649')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_3649">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">ECUMODES_READ_MODE</td>
+                  <td class="DefaultCell">80 02 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.370385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_3783" href="javascript:switchTable('1.1.1.1.2_i__28107024_3783')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_3783">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">ECUMODES_READ_MODE</td>
+                  <td class="DefaultCell">80 02 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_ECU_MODE_TYPE_SUBTYPE_DATA</td>
+                  <td class="DefaultCell">0x00 0x00</td>
+                  <td class="DefaultCell">00 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_ECU_MODE</td>
+                  <td class="DefaultCell">Field Mode</td>
+                  <td class="DefaultCell">02 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_3969" href="javascript:switchTable('1.1.1.1.2_i__28107024_3969')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_3969">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[5] 80 02 00 00 02</td>
+                  <td class="DefaultCell">[5] 80 02 00 00 02</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">6. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the Lock Flag is not set</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">7. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.470385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.480385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.480385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.480385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_4135" href="javascript:switchTable('1.1.1.1.2_i__28107024_4135')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_4135">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_SUPPLIER_MANUFACTURING_LOCK_SETTINGS</td>
+                  <td class="DefaultCell">44 66 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.480385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_4269" href="javascript:switchTable('1.1.1.1.2_i__28107024_4269')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_4269">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_SUPPLIER_MANUFACTURING_LOCK_SETTINGS</td>
+                  <td class="DefaultCell">44 66 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_LOCK_STATUS_WERT</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_4434" href="javascript:switchTable('1.1.1.1.2_i__28107024_4434')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_4434">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 44 66 00</td>
+                  <td class="DefaultCell">[3] 44 66 00</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">8. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if SFA token for DLT is not installed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">9. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.580385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.590385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.590385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.590385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_4600" href="javascript:switchTable('1.1.1.1.2_i__28107024_4600')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_4600">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl</td>
+                  <td class="DefaultCell">0x31</td>
+                  <td class="DefaultCell">31 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SuppressPositiveResponseMessageIndicationBit</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndRoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">FEATURE_ID</td>
+                  <td class="DefaultCell">0x00 0x1D 0x1A</td>
+                  <td class="DefaultCell">00 1d 1a </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">VERBOSE</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.590385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_4818" href="javascript:switchTable('1.1.1.1.2_i__28107024_4818')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_4818">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl Response ID</td>
+                  <td class="DefaultCell">0x71</td>
+                  <td class="DefaultCell">71 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndStatusRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">STAT_SFA_READ_STATUS</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">__SwitchKey__</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_SFA_READ_STATUS_MUX</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_ID_DATA</td>
+                  <td class="DefaultCell">0x1D 0x1A 0x00</td>
+                  <td class="DefaultCell">1d 1a 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_STATUS</td>
+                  <td class="DefaultCell">EXPIRED</td>
+                  <td class="DefaultCell">03 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RC_STEUERN_ROUTINE_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_5057" href="javascript:switchTable('1.1.1.1.2_i__28107024_5057')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_5057">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RCT'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RID_SR/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1A 00 03</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1A 00 03</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">10. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if SFA token for XCP is not installed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">11. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.690385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.700385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_5254" href="javascript:switchTable('1.1.1.1.2_i__28107024_5254')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_5254">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl</td>
+                  <td class="DefaultCell">0x31</td>
+                  <td class="DefaultCell">31 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SuppressPositiveResponseMessageIndicationBit</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndRoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">FEATURE_ID</td>
+                  <td class="DefaultCell">0x00 0x1D 0x1B</td>
+                  <td class="DefaultCell">00 1d 1b </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">VERBOSE</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.700385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_5472" href="javascript:switchTable('1.1.1.1.2_i__28107024_5472')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RC_STEUERN_ROUTINE/RC_STEUERN_ROUTINE_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_5472">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControl Response ID</td>
+                  <td class="DefaultCell">0x71</td>
+                  <td class="DefaultCell">71 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RoutineControlType</td>
+                  <td class="DefaultCell">StartRoutine</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">RIDAndStatusRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineIdentifier</td>
+                  <td class="DefaultCell">SFA_READ_STATUS</td>
+                  <td class="DefaultCell">0f 29 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">RoutineControlOptionRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">STAT_SFA_READ_STATUS</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">__SwitchKey__</td>
+                  <td class="DefaultCell">0</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_SFA_READ_STATUS_MUX</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_ID_DATA</td>
+                  <td class="DefaultCell">0x1D 0x1B 0x00</td>
+                  <td class="DefaultCell">1d 1b 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 100px;">STAT_FEATURE_STATUS</td>
+                  <td class="DefaultCell">EXPIRED</td>
+                  <td class="DefaultCell">03 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RC_STEUERN_ROUTINE_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_5711" href="javascript:switchTable('1.1.1.1.2_i__28107024_5711')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_5711">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RCT'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="DefaultCell">[1] 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'RID_SR/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1B 00 03</td>
+                  <td class="DefaultCell">[7] 0F 29 00 1D 1B 00 03</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">12. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the status of Current User Request for Secure DLT remains Active</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">13. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.800385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.810385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=10ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.810385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.810385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_5908" href="javascript:switchTable('1.1.1.1.2_i__28107024_5908')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_5908">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_DLT_ONOFF</td>
+                  <td class="DefaultCell">41 0a </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.810385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=100ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_6042" href="javascript:switchTable('1.1.1.1.2_i__28107024_6042')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_6042">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_DLT_ONOFF</td>
+                  <td class="DefaultCell">41 0a </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_DLT_STATUS_WERT</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_6207" href="javascript:switchTable('1.1.1.1.2_i__28107024_6207')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_6207">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 41 0A 01</td>
+                  <td class="DefaultCell">[3] 41 0A 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">14. Report: None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Check if the status of Current User Request for Secure XCP remains Active</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">15. Diagnostic Service: Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Set P2 to 250ms, P2ex to 2000ms</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.910385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sending request '//LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ' ...</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.921385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics request sent to 'LIDAR_01' Elapsed time=11ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.921385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request sent successfully</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.921385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_6373" href="javascript:switchTable('1.1.1.1.2_i__28107024_6373')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_REQ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_6373">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DID</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">Wrapper</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_XCP_ONOFF</td>
+                  <td class="DefaultCell">40 c7 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1865.921385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Receiving diagnostic response</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1866.030385</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'LIDAR_01' Elapsed time=109ms (max=60000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1866.030385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_6507" href="javascript:switchTable('1.1.1.1.2_i__28107024_6507')">[−]</a>
+                    </td>
+                    <td>LIDAR_01: //LIDAR_01/LIDAR_01/RDBI_STATUS_LESEN/RDBI_STATUS_LESEN_RESP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_1.1.1.1.2_i__28107024_6507">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReadDataByIdentifier SID</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DIDAndDataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">WRAPPER</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataIdentifier</td>
+                  <td class="DefaultCell">_XCP_ONOFF</td>
+                  <td class="DefaultCell">40 c7 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">DataRecord</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 80px;">STAT_XCP_STATUS_WERT</td>
+                  <td class="DefaultCell">1</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1866.030385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Positive response received.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1866.030385</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Received primitive can be interpreted as diagnostic primitive 'RDBI_STATUS_LESEN_RESP'.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1866.030385</td>
+            <td class="NumberCell">Evaluate response</td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_1.1.1.1.2_i__28107024_6672" href="javascript:switchTable('1.1.1.1.2_i__28107024_6672')">[−]</a>
+                    </td>
+                    <td>Check of expected values</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTableExpand" id="tbl_1.1.1.1.2_i__28107024_6672">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                  <td class="DefineCell">Op.</td>
+                  <td class="DefineCell">Reference value</td>
+                  <td class="DefineCell">Actual</td>
+                  <td class="DefineCell" width="1px">Result</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Diagnostic parameter 'DID_DREC/EndOfServiceIteration0/WRAPPER'</td>
+                  <td class="DefaultCell">Bytes</td>
+                  <td class="DefaultCell">[3] 40 C7 01</td>
+                  <td class="DefaultCell">[3] 40 C7 01</td>
+                  <td class="PositiveResultCell">pass</td>
+                </tr>
+              </table>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table class="GroupEndTable">
+      <tr>
+        <td>End of Test Group: Field_Mode</td>
+      </tr>
+    </table>
+    <table class="GroupEndTable">
+      <tr>
+        <td>End of Test Group: SecureDebugInterfaces_DLT_XCP</td>
+      </tr>
+    </table>
+    <table class="GroupEndTable">
+      <tr>
+        <td>End of Test Group: LogTrace_Main</td>
+      </tr>
+    </table>
+    <table class="GroupEndTable">
+      <tr>
+        <td>End of Test Unit: SW6_LogTrace</td>
+      </tr>
+    </table>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">End of Report</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

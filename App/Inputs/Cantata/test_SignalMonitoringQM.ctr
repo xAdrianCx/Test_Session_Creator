@@ -1,0 +1,2119 @@
+===========================================================================
+= Cantata Test Harness v9.0                                               =
+= (c) 2019 QA Systems GmbH                                                =
+=-------------------------------------------------------------------------=
+= Test Description: SignalMonitoringQM                                    =
+=    Configuration: x86-Win32-gcc8.2-bundled                              =
+=     Test Started: Mon May 23 14:52:46 2022                              =
+===========================================================================
+------------------------- Start Test: SW4_16728565_NetSigMonQM_Init
+
+NetSigMonQM_Init:
+
+    Start Call Sequence Validation:
+    Expected calls: strncpy#1;strncpy#2;Dlt_RegisterContext#1
+
+        PASSED: Function: strncpy
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        strncpy#1
+        PASSED: Check: ((uint8(*))param_1)[0] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[1] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[2] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[3] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: param_2 = "CuC"
+                value: "CuC"
+        PASSED: Check: param_3 = 4U
+                value: 4
+
+        PASSED: Function: strncpy
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        strncpy#1;strncpy#2
+        PASSED: Check: ((uint8(*))param_1)[0] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[1] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[2] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ((uint8(*))param_1)[3] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: param_2 = "SGQM"
+                value: "SGQM"
+        PASSED: Check: param_3 = 4U
+                value: 4
+
+        PASSED: Function: Dlt_RegisterContext
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        strncpy#1;strncpy#2;Dlt_RegisterContext#1
+        PASSED: Check: AppId[0] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: AppId[1] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: AppId[2] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: AppId[3] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextId[0] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextId[1] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextId[2] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextId[3] = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: AppDescription = NULL
+                value: 0x00000000
+        PASSED: Check: LenAppDescription = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextDescription = NULL
+                value: 0x00000000
+        PASSED: Check: LenContextDescription = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    strncpy#1;strncpy#2;Dlt_RegisterContext#1
+
+------------------------- End Test: SW4_16728565_NetSigMonQM_Init
+
+------------------------- Start Test: SW4_16728567_NetSigMonQM_Init_1
+
+NetSigMonQM_Init:
+
+    Start Call Sequence Validation:
+    Expected calls: strncpy#3;strncpy#4;Dlt_RegisterContext#2
+
+        PASSED: Function: strncpy
+        PASSED: Instance: 3
+        Call sequence matched so far: 
+        strncpy#3
+        PASSED: Check: ((uint8(*))param_1)[0] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[1] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[2] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[3] = 0xFFU
+                value: 0xFF
+        PASSED: Check: param_2 = "CuC"
+                value: "CuC"
+        PASSED: Check: param_3 = 4U
+                value: 4
+
+        PASSED: Function: strncpy
+        PASSED: Instance: 4
+        Call sequence matched so far: 
+        strncpy#3;strncpy#4
+        PASSED: Check: ((uint8(*))param_1)[0] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[1] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[2] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ((uint8(*))param_1)[3] = 0xFFU
+                value: 0xFF
+        PASSED: Check: param_2 = "SGQM"
+                value: "SGQM"
+        PASSED: Check: param_3 = 4U
+                value: 4
+
+        PASSED: Function: Dlt_RegisterContext
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        strncpy#3;strncpy#4;Dlt_RegisterContext#2
+        PASSED: Check: AppId[0] = 0xFFU
+                value: 0xFF
+        PASSED: Check: AppId[1] = 0xFFU
+                value: 0xFF
+        PASSED: Check: AppId[2] = 0xFFU
+                value: 0xFF
+        PASSED: Check: AppId[3] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ContextId[0] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ContextId[1] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ContextId[2] = 0xFFU
+                value: 0xFF
+        PASSED: Check: ContextId[3] = 0xFFU
+                value: 0xFF
+        PASSED: Check: AppDescription = NULL
+                value: 0x00000000
+        PASSED: Check: LenAppDescription = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: ContextDescription = NULL
+                value: 0x00000000
+        PASSED: Check: LenContextDescription = 0U
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    strncpy#3;strncpy#4;Dlt_RegisterContext#2
+
+------------------------- End Test: SW4_16728567_NetSigMonQM_Init_1
+
+------------------------- Start Test: SW4_16728569_NetSigMonQM_MainFunction
+
+NetSigMonQM_MainFunction: If1 0
+
+    Start Call Sequence Validation:
+    Expected calls: Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+                    SigMonEnvironmentalInformation#1;
+                    SigMonInfrastructureLegacy#1;
+                    SigMonPowermanagementConsumer#1;SigMonVehicleInformation#1;
+                    SigMonSensorCleaningMaster#1;SetPADEventStatusQM#1
+
+        PASSED: Function: Com_ReceiveSignal
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1
+        PASSED: Check: SignalId = 0x1U
+                value: 1
+
+        PASSED: Function: SigMonMileageSupreme
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1
+
+        PASSED: Function: SigMonEnvironmentalInformation
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1
+
+        PASSED: Function: SigMonInfrastructureLegacy
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1;SigMonInfrastructureLegacy#1
+
+        PASSED: Function: SigMonPowermanagementConsumer
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1;SigMonInfrastructureLegacy#1;
+        SigMonPowermanagementConsumer#1
+
+        PASSED: Function: SigMonVehicleInformation
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1;SigMonInfrastructureLegacy#1;
+        SigMonPowermanagementConsumer#1;SigMonVehicleInformation#1
+
+        PASSED: Function: SigMonSensorCleaningMaster
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1;SigMonInfrastructureLegacy#1;
+        SigMonPowermanagementConsumer#1;SigMonVehicleInformation#1;
+        SigMonSensorCleaningMaster#1
+
+        PASSED: Function: SetPADEventStatusQM
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#1;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#1;SigMonInfrastructureLegacy#1;
+        SigMonPowermanagementConsumer#1;SigMonVehicleInformation#1;
+        SigMonSensorCleaningMaster#1;SetPADEventStatusQM#1
+        PASSED: Check: PAD_DTCID = SIGMONI_PAD_INV_QM
+                value: 0x76    'v'
+        PASSED: Check: status = DEM_EVENT_STATUS_PASSED
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x00    <NUL>
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 0
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    Com_ReceiveSignal#1;SigMonMileageSupreme#1;SigMonEnvironmentalInformation#1;
+    SigMonInfrastructureLegacy#1;SigMonPowermanagementConsumer#1;
+    SigMonVehicleInformation#1;SigMonSensorCleaningMaster#1;
+    SetPADEventStatusQM#1
+
+------------------------- End Test: SW4_16728569_NetSigMonQM_MainFunction
+
+------------------------- Start Test: SW4_16728571_NetSigMonQM_MainFunction1
+
+NetSigMonQM_MainFunction: If1 1
+
+    Start Call Sequence Validation:
+    Expected calls: Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+                    SigMonEnvironmentalInformation#2;
+                    SigMonInfrastructureLegacy#2;
+                    SigMonPowermanagementConsumer#2;SigMonVehicleInformation#2;
+                    SigMonSensorCleaningMaster#2;SetPADEventStatusQM#2
+
+        PASSED: Function: Com_ReceiveSignal
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2
+        PASSED: Check: SignalId = 0x1U
+                value: 1
+
+        PASSED: Function: SigMonMileageSupreme
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1
+
+        PASSED: Function: SigMonEnvironmentalInformation
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2
+
+        PASSED: Function: SigMonInfrastructureLegacy
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2;SigMonInfrastructureLegacy#2
+
+        PASSED: Function: SigMonPowermanagementConsumer
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2;SigMonInfrastructureLegacy#2;
+        SigMonPowermanagementConsumer#2
+
+        PASSED: Function: SigMonVehicleInformation
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2;SigMonInfrastructureLegacy#2;
+        SigMonPowermanagementConsumer#2;SigMonVehicleInformation#2
+
+        PASSED: Function: SigMonSensorCleaningMaster
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2;SigMonInfrastructureLegacy#2;
+        SigMonPowermanagementConsumer#2;SigMonVehicleInformation#2;
+        SigMonSensorCleaningMaster#2
+
+        PASSED: Function: SetPADEventStatusQM
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Com_ReceiveSignal#2;SigMonMileageSupreme#1;
+        SigMonEnvironmentalInformation#2;SigMonInfrastructureLegacy#2;
+        SigMonPowermanagementConsumer#2;SigMonVehicleInformation#2;
+        SigMonSensorCleaningMaster#2;SetPADEventStatusQM#2
+        PASSED: Check: PAD_DTCID = SIGMONI_PAD_INV_QM
+                value: 0x76    'v'
+        PASSED: Check: status = DEM_EVENT_STATUS_FAILED
+                value: 0x01    <SOH>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x00    <NUL>
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    Com_ReceiveSignal#2;SigMonMileageSupreme#1;SigMonEnvironmentalInformation#2;
+    SigMonInfrastructureLegacy#2;SigMonPowermanagementConsumer#2;
+    SigMonVehicleInformation#2;SigMonSensorCleaningMaster#2;
+    SetPADEventStatusQM#2
+
+------------------------- End Test: SW4_16728571_NetSigMonQM_MainFunction1
+
+------------------------- Start Test: SW4_16728573_NetSigMonQM_EcuHeartBeat
+
+NetSigMonQM_EcuHeartBeat:
+
+    Start Call Sequence Validation:
+    Expected calls: SigMonEcuHeartBeatCall#1
+
+        PASSED: Function: SigMonEcuHeartBeatCall
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        SigMonEcuHeartBeatCall#1
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    SigMonEcuHeartBeatCall#1
+
+------------------------- End Test: SW4_16728573_NetSigMonQM_EcuHeartBeat
+
+------------------------- Start Test: SW4_16728575_NetSigMonQM_VehicleStatusCall_1sec
+
+NetSigMonQM_VehicleStatusCall_1sec:
+
+    Start Call Sequence Validation:
+    Expected calls: SigMonStastusEnergyCall#1
+
+        PASSED: Function: SigMonStastusEnergyCall
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        SigMonStastusEnergyCall#1
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    SigMonStastusEnergyCall#1
+
+------------------------- End Test: SW4_16728575_NetSigMonQM_VehicleStatusCall_1sec
+
+------------------------- Start Test: SW4_16728577_NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData
+
+NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728577_NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData
+
+------------------------- Start Test: SW4_16728579_NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData
+
+NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData:
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data[0] = 0x00U
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x00    <NUL>
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728579_NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData
+
+------------------------- Start Test: SW4_16728581_NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData_1
+
+NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData:
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data[0] = 0xFFU
+                value: 0xFF
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0xFF
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728581_NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadData_1
+
+------------------------- Start Test: SW4_16728583_NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData
+
+NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data[0] = 0x44U
+                value: 0x44    'D'
+        PASSED: Check: Data[1] = 0x33U
+                value: 0x33    '3'
+        PASSED: Check: Data[2] = 0x22U
+                value: 0x22    '"'
+        PASSED: Check: Data[3] = 0x11U
+                value: 0x11    <DC1>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1144201745
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728583_NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData
+
+------------------------- Start Test: SW4_16728585_NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data = 0x00U
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x00    <NUL>
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728585_NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+------------------------- Start Test: SW4_16728587_NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data = 0xFFU
+                value: 0xFF
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0xFF
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728587_NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData
+
+------------------------- Start Test: SW4_16728589_NetSigMonQM_DID_4019_UwbTempOutside_ReadData
+
+NetSigMonQM_DID_4019_UwbTempOutside_ReadData: If1 0
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data = 0x50U
+                value: 0x50    'P'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 0
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728589_NetSigMonQM_DID_4019_UwbTempOutside_ReadData
+
+------------------------- Start Test: SW4_16728591_NetSigMonQM_DID_4019_UwbTempOutside_ReadData_1
+
+NetSigMonQM_DID_4019_UwbTempOutside_ReadData: If1 1
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data = 0xFFU
+                value: 0xFF
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 1024
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728591_NetSigMonQM_DID_4019_UwbTempOutside_ReadData_1
+
+------------------------- Start Test: SW4_16728593_NetSigMonQM_DID_4019_UwbTempOutside_ReadData_2
+
+NetSigMonQM_DID_4019_UwbTempOutside_ReadData: If1 1
+
+    Start Call Sequence Validation:
+        PASSED: Check: returnValue = expected_returnValue
+                value: 0x00    <NUL>
+        PASSED: Check: Data = 0x50U
+                value: 0x50    'P'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: -1
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728593_NetSigMonQM_DID_4019_UwbTempOutside_ReadData_2
+
+------------------------- Start Test: SW4_16728595_NetSigMonQM_ActiveCommunicationRequest
+
+NetSigMonQM_ActiveCommunicationRequest
+
+    Start Call Sequence Validation:
+    Expected calls: SigMonActiveCommunicationRequestCall#1
+
+        PASSED: Function: SigMonActiveCommunicationRequestCall
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        SigMonActiveCommunicationRequestCall#1
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    SigMonActiveCommunicationRequestCall#1
+
+------------------------- End Test: SW4_16728595_NetSigMonQM_ActiveCommunicationRequest
+
+------------------------- Start Test: SW4_16728597_NetSigMonQM_10msLow_MET_GET_Handler
+
+NetSigMonQM_10msLow_MET_GET_Handler:
+
+    Start Call Sequence Validation:
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728597_NetSigMonQM_10msLow_MET_GET_Handler
+
+------------------------- Start Test: SW4_16728599_NetSigMonQM_100msLow_MET_GET_ReturnHandler
+
+NetSigMonQM_100msLow_MET_GET_ReturnHandler:
+
+    Start Call Sequence Validation:
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_ExteriorTemperature_v
+                value: 21845
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorMemoryFZM =
+         expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_StatusInterlockErrorM
+        emoryFZM
+                value: 0x55    'U'
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v = 
+        expected_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalValue_v
+                value: 1431655765
+        PASSED: Check: 
+        Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v = expec
+        ted_Rte_Irv_NetSigMonQM_IRV_NetSigMonQM_UWB_InvalidSignalPosition_v
+                value: 0x55    'U'
+        PASSED: Check Memory: ApSigMt_MsgInfoQMMain
+        PASSED: Check: ui_PADStateQM = expected_ui_PADStateQM
+                value: 0x55    'U'
+        PASSED: Check: PADInvStatusQM = expected_PADInvStatusQM
+                value: 1431655765
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: SW4_16728599_NetSigMonQM_100msLow_MET_GET_ReturnHandler
+
+------------------------- Start Test: COVERAGE RULE SET
+
+ISO26262-6 2011 ASIL B+C unit level (HR)
+GET_COVERAGE_MIN: entry point coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 0.0%
+
+>>  FAILED: Check Range: 100% Entry Point Coverage
+           actual: 0
+            lower: 100
+            upper: 100
+GET_COVERAGE_MIN: statement coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 0.0%
+
+>>  FAILED: Check Range: 100% Statement Coverage
+           actual: 0
+            lower: 100
+            upper: 100
+GET_COVERAGE_MIN: decision coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Decision Coverage
+           actual: 100
+            lower: 100
+            upper: 100
+-----------------------------------------------------------------------------
+Coverage results for  entry point, statement, decision, 
+                 for "*" in context "*"
+                 with executed and un-executed details
+                 feasible only, including catch-clauses
+-----------------------------------------------------------------------------
+IpBase.h(550):IpBase_ByteSwap16(uint16 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(550):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_ByteSwap16"                                      executed           0
+"IpBase_ByteSwap16"                                   un-executed           1
+"IpBase_ByteSwap16"                          entry point coverage        0.0%
+
+IpBase.h(562):IpBase_ByteSwap32(uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(562):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_ByteSwap32"                                      executed           0
+"IpBase_ByteSwap32"                                   un-executed           1
+"IpBase_ByteSwap32"                          entry point coverage        0.0%
+
+IpBase.h(575):IpBase_ByteSwap64(uint64 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(575):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_ByteSwap64"                                      executed           0
+"IpBase_ByteSwap64"                                   un-executed           1
+"IpBase_ByteSwap64"                          entry point coverage        0.0%
+
+IpBase.h(699):IpBase_GetUint16(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(699):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint16"                                       executed           0
+"IpBase_GetUint16"                                    un-executed           1
+"IpBase_GetUint16"                           entry point coverage        0.0%
+
+IpBase.h(712):IpBase_GetUint24(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(712):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint24"                                       executed           0
+"IpBase_GetUint24"                                    un-executed           1
+"IpBase_GetUint24"                           entry point coverage        0.0%
+
+IpBase.h(726):IpBase_GetUint32(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(726):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint32"                                       executed           0
+"IpBase_GetUint32"                                    un-executed           1
+"IpBase_GetUint32"                           entry point coverage        0.0%
+
+IpBase.h(740):IpBase_GetUint48(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(740):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint48"                                       executed           0
+"IpBase_GetUint48"                                    un-executed           1
+"IpBase_GetUint48"                           entry point coverage        0.0%
+
+IpBase.h(755):IpBase_GetUint64(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(755):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint64"                                       executed           0
+"IpBase_GetUint64"                                    un-executed           1
+"IpBase_GetUint64"                           entry point coverage        0.0%
+
+IpBase.h(686):IpBase_GetUint8(const uint8 *const ,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(686):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_GetUint8"                                        executed           0
+"IpBase_GetUint8"                                     un-executed           1
+"IpBase_GetUint8"                            entry point coverage        0.0%
+
+IpBase.h(603):IpBase_PutUint16(uint8 *const ,uint32_least ,uint16 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(603):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint16"                                       executed           0
+"IpBase_PutUint16"                                    un-executed           1
+"IpBase_PutUint16"                           entry point coverage        0.0%
+
+IpBase.h(617):IpBase_PutUint24(uint8 *const ,uint32_least ,uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(617):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint24"                                       executed           0
+"IpBase_PutUint24"                                    un-executed           1
+"IpBase_PutUint24"                           entry point coverage        0.0%
+
+IpBase.h(632):IpBase_PutUint32(uint8 *const ,uint32_least ,uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(632):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint32"                                       executed           0
+"IpBase_PutUint32"                                    un-executed           1
+"IpBase_PutUint32"                           entry point coverage        0.0%
+
+IpBase.h(648):IpBase_PutUint48(uint8 *const ,uint32_least ,uint64 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(648):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint48"                                       executed           0
+"IpBase_PutUint48"                                    un-executed           1
+"IpBase_PutUint48"                           entry point coverage        0.0%
+
+IpBase.h(666):IpBase_PutUint64(uint8 *const ,uint32_least ,uint64 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(666):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint64"                                       executed           0
+"IpBase_PutUint64"                                    un-executed           1
+"IpBase_PutUint64"                           entry point coverage        0.0%
+
+IpBase.h(590):IpBase_PutUint8(uint8 *const ,uint32_least ,uint8 )
+entry point coverage details (with executed and un-executed cases)
+
+IpBase.h(590):              entry   1                        >> NOT EXECUTED 
+
+"IpBase_PutUint8"                                        executed           0
+"IpBase_PutUint8"                                     un-executed           1
+"IpBase_PutUint8"                            entry point coverage        0.0%
+
+SignalMonitoringQM.c(806):NetSigMonQM_100msLow_MET_GET_ReturnHandler()
+entry point coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(806):      entry   1                                       1
+
+"100msLow_MET_GET_ReturnHandler"                         executed           1
+"100msLow_MET_GET_ReturnHandler"                      un-executed           0
+"100msLow_MET_GET_ReturnHandler"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(843):NetSigMonQM_10msLow_MET_GET_Handler()
+entry point coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(843):      entry   1                                       1
+
+"gMonQM_10msLow_MET_GET_Handler"                         executed           1
+"gMonQM_10msLow_MET_GET_Handler"                      un-executed           0
+"gMonQM_10msLow_MET_GET_Handler"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(888):NetSigMonQM_ActiveCommunicationRequest()
+entry point coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(888):      entry   1                                       1
+
+"nQM_ActiveCommunicationRequest"                         executed           1
+"nQM_ActiveCommunicationRequest"                      un-executed           0
+"nQM_ActiveCommunicationRequest"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(946):NetSigMonQM_DID_4019_UwbTempOutside_ReadData(uint8 *)
+entry point coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(946):      entry   1                                       3
+
+"D_4019_UwbTempOutside_ReadData"                         executed           1
+"D_4019_UwbTempOutside_ReadData"                      un-executed           0
+"D_4019_UwbTempOutside_ReadData"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(1018):NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData(uint8
+ *)
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1018):      entry   1                                       2
+
+"41CA_UwbLidarDummyDtc_ReadData"                         executed           1
+"41CA_UwbLidarDummyDtc_ReadData"                      un-executed           0
+"41CA_UwbLidarDummyDtc_ReadData"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(1077):NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData(
+Dem_EventIdType ,uint8 *)
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1077):      entry   1                                       1
+
+"UwbInvalidSignalValue_ReadData"                         executed           1
+"UwbInvalidSignalValue_ReadData"                      un-executed           0
+"UwbInvalidSignalValue_ReadData"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(1146):NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadDa
+ta(Dem_EventIdType ,uint8 *)
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1146):      entry   1                                       2
+
+"InvalidSignalPosition_ReadData"                         executed           1
+"InvalidSignalPosition_ReadData"                      un-executed           0
+"InvalidSignalPosition_ReadData"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(1211):NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData(Dem_Even
+tIdType ,uint8 *)
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1211):      entry   1                                       1
+
+"ID_6FF8_UwbNotifierID_ReadData"                         executed           1
+"ID_6FF8_UwbNotifierID_ReadData"                      un-executed           0
+"ID_6FF8_UwbNotifierID_ReadData"             entry point coverage      100.0%
+
+SignalMonitoringQM.c(1285):NetSigMonQM_EcuHeartBeat()
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1285):      entry   1                                       1
+
+"NetSigMonQM_EcuHeartBeat"                               executed           1
+"NetSigMonQM_EcuHeartBeat"                            un-executed           0
+"NetSigMonQM_EcuHeartBeat"                   entry point coverage      100.0%
+
+SignalMonitoringQM.c(1335):NetSigMonQM_Init()
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1335):      entry   1                                       2
+
+"NetSigMonQM_Init"                                       executed           1
+"NetSigMonQM_Init"                                    un-executed           0
+"NetSigMonQM_Init"                           entry point coverage      100.0%
+
+SignalMonitoringQM.c(1495):NetSigMonQM_MainFunction()
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1495):      entry   1                                       2
+
+"NetSigMonQM_MainFunction"                               executed           1
+"NetSigMonQM_MainFunction"                            un-executed           0
+"NetSigMonQM_MainFunction"                   entry point coverage      100.0%
+
+SignalMonitoringQM.c(1577):NetSigMonQM_VehicleStatusCall_1sec()
+entry point coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1577):      entry   1                                       1
+
+"igMonQM_VehicleStatusCall_1sec"                         executed           1
+"igMonQM_VehicleStatusCall_1sec"                      un-executed           0
+"igMonQM_VehicleStatusCall_1sec"             entry point coverage      100.0%
+
+CDD_Scmt.h(48):Scmt_Tick2Ms(uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+CDD_Scmt.h(48):             entry   1                        >> NOT EXECUTED 
+
+"Scmt_Tick2Ms"                                           executed           0
+"Scmt_Tick2Ms"                                        un-executed           1
+"Scmt_Tick2Ms"                               entry point coverage        0.0%
+
+CDD_Scmt.h(54):Scmt_Tick2Us100(uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+CDD_Scmt.h(54):             entry   1                        >> NOT EXECUTED 
+
+"Scmt_Tick2Us100"                                        executed           0
+"Scmt_Tick2Us100"                                     un-executed           1
+"Scmt_Tick2Us100"                            entry point coverage        0.0%
+
+vIKE_Priv.h(1429):vIKE_ByteSwap16(uint16 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1429):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_ByteSwap16"                                        executed           0
+"vIKE_ByteSwap16"                                     un-executed           1
+"vIKE_ByteSwap16"                            entry point coverage        0.0%
+
+vIKE_Priv.h(1441):vIKE_ByteSwap32(uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1441):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_ByteSwap32"                                        executed           0
+"vIKE_ByteSwap32"                                     un-executed           1
+"vIKE_ByteSwap32"                            entry point coverage        0.0%
+
+vIKE_Priv.h(1380):vIKE_GetUint16(const uint8 *,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1380):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_GetUint16"                                         executed           0
+"vIKE_GetUint16"                                      un-executed           1
+"vIKE_GetUint16"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1395):vIKE_GetUint32(const uint8 *,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1395):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_GetUint32"                                         executed           0
+"vIKE_GetUint32"                                      un-executed           1
+"vIKE_GetUint32"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1411):vIKE_GetUint64(const uint8 *,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1411):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_GetUint64"                                         executed           0
+"vIKE_GetUint64"                                      un-executed           1
+"vIKE_GetUint64"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1365):vIKE_GetUint8(const uint8 *,uint32_least )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1365):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_GetUint8"                                          executed           0
+"vIKE_GetUint8"                                       un-executed           1
+"vIKE_GetUint8"                              entry point coverage        0.0%
+
+vIKE_Priv.h(1309):vIKE_PutUint16(uint8 *,uint32_least ,uint16 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1309):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_PutUint16"                                         executed           0
+"vIKE_PutUint16"                                      un-executed           1
+"vIKE_PutUint16"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1325):vIKE_PutUint32(uint8 *,uint32_least ,uint32 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1325):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_PutUint32"                                         executed           0
+"vIKE_PutUint32"                                      un-executed           1
+"vIKE_PutUint32"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1343):vIKE_PutUint64(uint8 *,uint32_least ,uint64 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1343):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_PutUint64"                                         executed           0
+"vIKE_PutUint64"                                      un-executed           1
+"vIKE_PutUint64"                             entry point coverage        0.0%
+
+vIKE_Priv.h(1294):vIKE_PutUint8(uint8 *,uint32_least ,uint8 )
+entry point coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1294):          entry   1                        >> NOT EXECUTED 
+
+"vIKE_PutUint8"                                          executed           0
+"vIKE_PutUint8"                                       un-executed           1
+"vIKE_PutUint8"                              entry point coverage        0.0%
+
+IpBase.h(550):IpBase_ByteSwap16(uint16 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(552):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_ByteSwap16"                                      executed           0
+"IpBase_ByteSwap16"                                   un-executed           1
+"IpBase_ByteSwap16"                            statement coverage        0.0%
+
+IpBase.h(562):IpBase_ByteSwap32(uint32 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(564):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_ByteSwap32"                                      executed           0
+"IpBase_ByteSwap32"                                   un-executed           1
+"IpBase_ByteSwap32"                            statement coverage        0.0%
+
+IpBase.h(575):IpBase_ByteSwap64(uint64 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(577):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_ByteSwap64"                                      executed           0
+"IpBase_ByteSwap64"                                   un-executed           1
+"IpBase_ByteSwap64"                            statement coverage        0.0%
+
+IpBase.h(699):IpBase_GetUint16(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(702):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint16"                                       executed           0
+"IpBase_GetUint16"                                    un-executed           1
+"IpBase_GetUint16"                             statement coverage        0.0%
+
+IpBase.h(712):IpBase_GetUint24(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(715):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint24"                                       executed           0
+"IpBase_GetUint24"                                    un-executed           1
+"IpBase_GetUint24"                             statement coverage        0.0%
+
+IpBase.h(726):IpBase_GetUint32(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(729):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint32"                                       executed           0
+"IpBase_GetUint32"                                    un-executed           1
+"IpBase_GetUint32"                             statement coverage        0.0%
+
+IpBase.h(740):IpBase_GetUint48(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(743):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint48"                                       executed           0
+"IpBase_GetUint48"                                    un-executed           1
+"IpBase_GetUint48"                             statement coverage        0.0%
+
+IpBase.h(755):IpBase_GetUint64(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(758):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint64"                                       executed           0
+"IpBase_GetUint64"                                    un-executed           1
+"IpBase_GetUint64"                             statement coverage        0.0%
+
+IpBase.h(686):IpBase_GetUint8(const uint8 *const ,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(689):              stmnt   1 (return)               >> NOT EXECUTED 
+
+"IpBase_GetUint8"                                        executed           0
+"IpBase_GetUint8"                                     un-executed           1
+"IpBase_GetUint8"                              statement coverage        0.0%
+
+IpBase.h(603):IpBase_PutUint16(uint8 *const ,uint32_least ,uint16 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(606):              stmnt   1 (other)                >> NOT EXECUTED 
+IpBase.h(607):              stmnt   2 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint16"                                       executed           0
+"IpBase_PutUint16"                                    un-executed           2
+"IpBase_PutUint16"                             statement coverage        0.0%
+
+IpBase.h(617):IpBase_PutUint24(uint8 *const ,uint32_least ,uint32 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(620):              stmnt   1 (other)                >> NOT EXECUTED 
+IpBase.h(621):              stmnt   2 (other)                >> NOT EXECUTED 
+IpBase.h(622):              stmnt   3 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint24"                                       executed           0
+"IpBase_PutUint24"                                    un-executed           3
+"IpBase_PutUint24"                             statement coverage        0.0%
+
+IpBase.h(632):IpBase_PutUint32(uint8 *const ,uint32_least ,uint32 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(635):              stmnt   1 (other)                >> NOT EXECUTED 
+IpBase.h(636):              stmnt   2 (other)                >> NOT EXECUTED 
+IpBase.h(637):              stmnt   3 (other)                >> NOT EXECUTED 
+IpBase.h(638):              stmnt   4 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint32"                                       executed           0
+"IpBase_PutUint32"                                    un-executed           4
+"IpBase_PutUint32"                             statement coverage        0.0%
+
+IpBase.h(648):IpBase_PutUint48(uint8 *const ,uint32_least ,uint64 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(651):              stmnt   1 (other)                >> NOT EXECUTED 
+IpBase.h(652):              stmnt   2 (other)                >> NOT EXECUTED 
+IpBase.h(653):              stmnt   3 (other)                >> NOT EXECUTED 
+IpBase.h(654):              stmnt   4 (other)                >> NOT EXECUTED 
+IpBase.h(655):              stmnt   5 (other)                >> NOT EXECUTED 
+IpBase.h(656):              stmnt   6 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint48"                                       executed           0
+"IpBase_PutUint48"                                    un-executed           6
+"IpBase_PutUint48"                             statement coverage        0.0%
+
+IpBase.h(666):IpBase_PutUint64(uint8 *const ,uint32_least ,uint64 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(669):              stmnt   1 (other)                >> NOT EXECUTED 
+IpBase.h(670):              stmnt   2 (other)                >> NOT EXECUTED 
+IpBase.h(671):              stmnt   3 (other)                >> NOT EXECUTED 
+IpBase.h(672):              stmnt   4 (other)                >> NOT EXECUTED 
+IpBase.h(673):              stmnt   5 (other)                >> NOT EXECUTED 
+IpBase.h(674):              stmnt   6 (other)                >> NOT EXECUTED 
+IpBase.h(675):              stmnt   7 (other)                >> NOT EXECUTED 
+IpBase.h(676):              stmnt   8 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint64"                                       executed           0
+"IpBase_PutUint64"                                    un-executed           8
+"IpBase_PutUint64"                             statement coverage        0.0%
+
+IpBase.h(590):IpBase_PutUint8(uint8 *const ,uint32_least ,uint8 )
+statement coverage details (with executed and un-executed cases)
+
+IpBase.h(593):              stmnt   1 (other)                >> NOT EXECUTED 
+
+"IpBase_PutUint8"                                        executed           0
+"IpBase_PutUint8"                                     un-executed           1
+"IpBase_PutUint8"                              statement coverage        0.0%
+
+SignalMonitoringQM.c(806):NetSigMonQM_100msLow_MET_GET_ReturnHandler()
+statement coverage details (with executed and un-executed cases)
+
+
+"100msLow_MET_GET_ReturnHandler"                         executed           0
+"100msLow_MET_GET_ReturnHandler"                      un-executed           0
+"100msLow_MET_GET_ReturnHandler"               statement coverage      100.0%
+
+SignalMonitoringQM.c(843):NetSigMonQM_10msLow_MET_GET_Handler()
+statement coverage details (with executed and un-executed cases)
+
+
+"gMonQM_10msLow_MET_GET_Handler"                         executed           0
+"gMonQM_10msLow_MET_GET_Handler"                      un-executed           0
+"gMonQM_10msLow_MET_GET_Handler"               statement coverage      100.0%
+
+SignalMonitoringQM.c(888):NetSigMonQM_ActiveCommunicationRequest()
+statement coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(894):      stmnt   1 (other)                               1
+
+"nQM_ActiveCommunicationRequest"                         executed           1
+"nQM_ActiveCommunicationRequest"                      un-executed           0
+"nQM_ActiveCommunicationRequest"               statement coverage      100.0%
+
+SignalMonitoringQM.c(946):NetSigMonQM_DID_4019_UwbTempOutside_ReadData(uint8 *)
+statement coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(955):      stmnt   1 (other)                               3
+alMonitoringQM.c(956):      stmnt   2 (other)                               3
+alMonitoringQM.c(958):      stmnt   3 (other)                               3
+alMonitoringQM.c(959):      stmnt   4 (cond)                                3
+alMonitoringQM.c(961):      stmnt   5 (other)                               1
+alMonitoringQM.c(964):      stmnt   6 (other)                               3
+alMonitoringQM.c(966):      stmnt   7 (return)                              3
+
+"D_4019_UwbTempOutside_ReadData"                         executed           7
+"D_4019_UwbTempOutside_ReadData"                      un-executed           0
+"D_4019_UwbTempOutside_ReadData"               statement coverage      100.0%
+
+SignalMonitoringQM.c(1018):NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData(uint8
+ *)
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1024):      stmnt   1 (other)                               2
+lMonitoringQM.c(1025):      stmnt   2 (return)                              2
+
+"41CA_UwbLidarDummyDtc_ReadData"                         executed           2
+"41CA_UwbLidarDummyDtc_ReadData"                      un-executed           0
+"41CA_UwbLidarDummyDtc_ReadData"               statement coverage      100.0%
+
+SignalMonitoringQM.c(1077):NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData(
+Dem_EventIdType ,uint8 *)
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1085):      stmnt   1 (other)                               1
+lMonitoringQM.c(1087):      stmnt   2 (other)                               1
+lMonitoringQM.c(1088):      stmnt   3 (other)                               1
+lMonitoringQM.c(1089):      stmnt   4 (other)                               1
+lMonitoringQM.c(1090):      stmnt   5 (other)                               1
+lMonitoringQM.c(1091):      stmnt   6 (other)                               1
+lMonitoringQM.c(1093):      stmnt   7 (return)                              1
+
+"UwbInvalidSignalValue_ReadData"                         executed           7
+"UwbInvalidSignalValue_ReadData"                      un-executed           0
+"UwbInvalidSignalValue_ReadData"               statement coverage      100.0%
+
+SignalMonitoringQM.c(1146):NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadDa
+ta(Dem_EventIdType ,uint8 *)
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1154):      stmnt   1 (other)                               2
+lMonitoringQM.c(1156):      stmnt   2 (other)                               2
+lMonitoringQM.c(1157):      stmnt   3 (other)                               2
+lMonitoringQM.c(1158):      stmnt   4 (other)                               2
+lMonitoringQM.c(1159):      stmnt   5 (return)                              2
+
+"InvalidSignalPosition_ReadData"                         executed           5
+"InvalidSignalPosition_ReadData"                      un-executed           0
+"InvalidSignalPosition_ReadData"               statement coverage      100.0%
+
+SignalMonitoringQM.c(1211):NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData(Dem_Even
+tIdType ,uint8 *)
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1218):      stmnt   1 (other)                               1
+lMonitoringQM.c(1219):      stmnt   2 (other)                               1
+lMonitoringQM.c(1220):      stmnt   3 (return)                              1
+
+"ID_6FF8_UwbNotifierID_ReadData"                         executed           3
+"ID_6FF8_UwbNotifierID_ReadData"                      un-executed           0
+"ID_6FF8_UwbNotifierID_ReadData"               statement coverage      100.0%
+
+SignalMonitoringQM.c(1285):NetSigMonQM_EcuHeartBeat()
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1291):      stmnt   1 (other)                               1
+
+"NetSigMonQM_EcuHeartBeat"                               executed           1
+"NetSigMonQM_EcuHeartBeat"                            un-executed           0
+"NetSigMonQM_EcuHeartBeat"                     statement coverage      100.0%
+
+SignalMonitoringQM.c(1335):NetSigMonQM_Init()
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1341):      stmnt   1 (other)                               2
+lMonitoringQM.c(1342):      stmnt   2 (other)                               2
+lMonitoringQM.c(1343):      stmnt   3 (other)                               2
+lMonitoringQM.c(1345):      stmnt   4 (other)                               2
+
+"NetSigMonQM_Init"                                       executed           4
+"NetSigMonQM_Init"                                    un-executed           0
+"NetSigMonQM_Init"                             statement coverage      100.0%
+
+SignalMonitoringQM.c(1495):NetSigMonQM_MainFunction()
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1501):      stmnt   1 (declaration)                         2
+lMonitoringQM.c(1502):      stmnt   2 (other)                               2
+lMonitoringQM.c(1503):      stmnt   3 (other)                               2
+lMonitoringQM.c(1504):      stmnt   4 (other)                               2
+lMonitoringQM.c(1505):      stmnt   5 (other)                               2
+lMonitoringQM.c(1506):      stmnt   6 (other)                               2
+lMonitoringQM.c(1507):      stmnt   7 (other)                               2
+lMonitoringQM.c(1508):      stmnt   8 (other)                               2
+lMonitoringQM.c(1509):      stmnt   9 (other)                               2
+lMonitoringQM.c(1512):      stmnt  10 (cond)                                2
+lMonitoringQM.c(1514):      stmnt  11 (other)                               1
+lMonitoringQM.c(1518):      stmnt  12 (other)                               1
+
+"NetSigMonQM_MainFunction"                               executed          12
+"NetSigMonQM_MainFunction"                            un-executed           0
+"NetSigMonQM_MainFunction"                     statement coverage      100.0%
+
+SignalMonitoringQM.c(1577):NetSigMonQM_VehicleStatusCall_1sec()
+statement coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1583):      stmnt   1 (other)                               1
+
+"igMonQM_VehicleStatusCall_1sec"                         executed           1
+"igMonQM_VehicleStatusCall_1sec"                      un-executed           0
+"igMonQM_VehicleStatusCall_1sec"               statement coverage      100.0%
+
+CDD_Scmt.h(48):Scmt_Tick2Ms(uint32 )
+statement coverage details (with executed and un-executed cases)
+
+CDD_Scmt.h(50):             stmnt   1 (declaration)          >> NOT EXECUTED 
+CDD_Scmt.h(51):             stmnt   2 (return)               >> NOT EXECUTED 
+
+"Scmt_Tick2Ms"                                           executed           0
+"Scmt_Tick2Ms"                                        un-executed           2
+"Scmt_Tick2Ms"                                 statement coverage        0.0%
+
+CDD_Scmt.h(54):Scmt_Tick2Us100(uint32 )
+statement coverage details (with executed and un-executed cases)
+
+CDD_Scmt.h(56):             stmnt   1 (declaration)          >> NOT EXECUTED 
+CDD_Scmt.h(57):             stmnt   2 (return)               >> NOT EXECUTED 
+
+"Scmt_Tick2Us100"                                        executed           0
+"Scmt_Tick2Us100"                                     un-executed           2
+"Scmt_Tick2Us100"                              statement coverage        0.0%
+
+vIKE_Priv.h(1429):vIKE_ByteSwap16(uint16 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1431):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_ByteSwap16"                                        executed           0
+"vIKE_ByteSwap16"                                     un-executed           1
+"vIKE_ByteSwap16"                              statement coverage        0.0%
+
+vIKE_Priv.h(1441):vIKE_ByteSwap32(uint32 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1443):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_ByteSwap32"                                        executed           0
+"vIKE_ByteSwap32"                                     un-executed           1
+"vIKE_ByteSwap32"                              statement coverage        0.0%
+
+vIKE_Priv.h(1380):vIKE_GetUint16(const uint8 *,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1384):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_GetUint16"                                         executed           0
+"vIKE_GetUint16"                                      un-executed           1
+"vIKE_GetUint16"                               statement coverage        0.0%
+
+vIKE_Priv.h(1395):vIKE_GetUint32(const uint8 *,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1399):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_GetUint32"                                         executed           0
+"vIKE_GetUint32"                                      un-executed           1
+"vIKE_GetUint32"                               statement coverage        0.0%
+
+vIKE_Priv.h(1411):vIKE_GetUint64(const uint8 *,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1415):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_GetUint64"                                         executed           0
+"vIKE_GetUint64"                                      un-executed           1
+"vIKE_GetUint64"                               statement coverage        0.0%
+
+vIKE_Priv.h(1365):vIKE_GetUint8(const uint8 *,uint32_least )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1369):          stmnt   1 (return)               >> NOT EXECUTED 
+
+"vIKE_GetUint8"                                          executed           0
+"vIKE_GetUint8"                                       un-executed           1
+"vIKE_GetUint8"                                statement coverage        0.0%
+
+vIKE_Priv.h(1309):vIKE_PutUint16(uint8 *,uint32_least ,uint16 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1313):          stmnt   1 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1314):          stmnt   2 (other)                >> NOT EXECUTED 
+
+"vIKE_PutUint16"                                         executed           0
+"vIKE_PutUint16"                                      un-executed           2
+"vIKE_PutUint16"                               statement coverage        0.0%
+
+vIKE_Priv.h(1325):vIKE_PutUint32(uint8 *,uint32_least ,uint32 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1329):          stmnt   1 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1330):          stmnt   2 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1331):          stmnt   3 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1332):          stmnt   4 (other)                >> NOT EXECUTED 
+
+"vIKE_PutUint32"                                         executed           0
+"vIKE_PutUint32"                                      un-executed           4
+"vIKE_PutUint32"                               statement coverage        0.0%
+
+vIKE_Priv.h(1343):vIKE_PutUint64(uint8 *,uint32_least ,uint64 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1347):          stmnt   1 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1348):          stmnt   2 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1349):          stmnt   3 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1350):          stmnt   4 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1351):          stmnt   5 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1352):          stmnt   6 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1353):          stmnt   7 (other)                >> NOT EXECUTED 
+vIKE_Priv.h(1354):          stmnt   8 (other)                >> NOT EXECUTED 
+
+"vIKE_PutUint64"                                         executed           0
+"vIKE_PutUint64"                                      un-executed           8
+"vIKE_PutUint64"                               statement coverage        0.0%
+
+vIKE_Priv.h(1294):vIKE_PutUint8(uint8 *,uint32_least ,uint8 )
+statement coverage details (with executed and un-executed cases)
+
+vIKE_Priv.h(1298):          stmnt   1 (other)                >> NOT EXECUTED 
+
+"vIKE_PutUint8"                                          executed           0
+"vIKE_PutUint8"                                       un-executed           1
+"vIKE_PutUint8"                                statement coverage        0.0%
+
+IpBase.h(550):IpBase_ByteSwap16(uint16 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_ByteSwap16"                                      executed           0
+"IpBase_ByteSwap16"                                   un-executed           0
+"IpBase_ByteSwap16"                             decision coverage      100.0%
+
+IpBase.h(562):IpBase_ByteSwap32(uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_ByteSwap32"                                      executed           0
+"IpBase_ByteSwap32"                                   un-executed           0
+"IpBase_ByteSwap32"                             decision coverage      100.0%
+
+IpBase.h(575):IpBase_ByteSwap64(uint64 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_ByteSwap64"                                      executed           0
+"IpBase_ByteSwap64"                                   un-executed           0
+"IpBase_ByteSwap64"                             decision coverage      100.0%
+
+IpBase.h(699):IpBase_GetUint16(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint16"                                       executed           0
+"IpBase_GetUint16"                                    un-executed           0
+"IpBase_GetUint16"                              decision coverage      100.0%
+
+IpBase.h(712):IpBase_GetUint24(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint24"                                       executed           0
+"IpBase_GetUint24"                                    un-executed           0
+"IpBase_GetUint24"                              decision coverage      100.0%
+
+IpBase.h(726):IpBase_GetUint32(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint32"                                       executed           0
+"IpBase_GetUint32"                                    un-executed           0
+"IpBase_GetUint32"                              decision coverage      100.0%
+
+IpBase.h(740):IpBase_GetUint48(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint48"                                       executed           0
+"IpBase_GetUint48"                                    un-executed           0
+"IpBase_GetUint48"                              decision coverage      100.0%
+
+IpBase.h(755):IpBase_GetUint64(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint64"                                       executed           0
+"IpBase_GetUint64"                                    un-executed           0
+"IpBase_GetUint64"                              decision coverage      100.0%
+
+IpBase.h(686):IpBase_GetUint8(const uint8 *const ,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_GetUint8"                                        executed           0
+"IpBase_GetUint8"                                     un-executed           0
+"IpBase_GetUint8"                               decision coverage      100.0%
+
+IpBase.h(603):IpBase_PutUint16(uint8 *const ,uint32_least ,uint16 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint16"                                       executed           0
+"IpBase_PutUint16"                                    un-executed           0
+"IpBase_PutUint16"                              decision coverage      100.0%
+
+IpBase.h(617):IpBase_PutUint24(uint8 *const ,uint32_least ,uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint24"                                       executed           0
+"IpBase_PutUint24"                                    un-executed           0
+"IpBase_PutUint24"                              decision coverage      100.0%
+
+IpBase.h(632):IpBase_PutUint32(uint8 *const ,uint32_least ,uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint32"                                       executed           0
+"IpBase_PutUint32"                                    un-executed           0
+"IpBase_PutUint32"                              decision coverage      100.0%
+
+IpBase.h(648):IpBase_PutUint48(uint8 *const ,uint32_least ,uint64 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint48"                                       executed           0
+"IpBase_PutUint48"                                    un-executed           0
+"IpBase_PutUint48"                              decision coverage      100.0%
+
+IpBase.h(666):IpBase_PutUint64(uint8 *const ,uint32_least ,uint64 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint64"                                       executed           0
+"IpBase_PutUint64"                                    un-executed           0
+"IpBase_PutUint64"                              decision coverage      100.0%
+
+IpBase.h(590):IpBase_PutUint8(uint8 *const ,uint32_least ,uint8 )
+decision coverage details (with executed and un-executed cases)
+
+
+"IpBase_PutUint8"                                        executed           0
+"IpBase_PutUint8"                                     un-executed           0
+"IpBase_PutUint8"                               decision coverage      100.0%
+
+SignalMonitoringQM.c(806):NetSigMonQM_100msLow_MET_GET_ReturnHandler()
+decision coverage details (with executed and un-executed cases)
+
+
+"100msLow_MET_GET_ReturnHandler"                         executed           0
+"100msLow_MET_GET_ReturnHandler"                      un-executed           0
+"100msLow_MET_GET_ReturnHandler"                decision coverage      100.0%
+
+SignalMonitoringQM.c(843):NetSigMonQM_10msLow_MET_GET_Handler()
+decision coverage details (with executed and un-executed cases)
+
+
+"gMonQM_10msLow_MET_GET_Handler"                         executed           0
+"gMonQM_10msLow_MET_GET_Handler"                      un-executed           0
+"gMonQM_10msLow_MET_GET_Handler"                decision coverage      100.0%
+
+SignalMonitoringQM.c(888):NetSigMonQM_ActiveCommunicationRequest()
+decision coverage details (with executed and un-executed cases)
+
+
+"nQM_ActiveCommunicationRequest"                         executed           0
+"nQM_ActiveCommunicationRequest"                      un-executed           0
+"nQM_ActiveCommunicationRequest"                decision coverage      100.0%
+
+SignalMonitoringQM.c(946):NetSigMonQM_DID_4019_UwbTempOutside_ReadData(uint8 *)
+decision coverage details (with executed and un-executed cases)
+
+alMonitoringQM.c(959):       decn   1 (if)     branch TRUE                  1
+alMonitoringQM.c(959):       decn   1 (if)     branch FALSE                 2
+
+"D_4019_UwbTempOutside_ReadData"                         executed           2
+"D_4019_UwbTempOutside_ReadData"                      un-executed           0
+"D_4019_UwbTempOutside_ReadData"                decision coverage      100.0%
+
+SignalMonitoringQM.c(1018):NetSigMonQM_DID_41CA_UwbLidarDummyDtc_ReadData(uint8
+ *)
+decision coverage details (with executed and un-executed cases)
+
+
+"41CA_UwbLidarDummyDtc_ReadData"                         executed           0
+"41CA_UwbLidarDummyDtc_ReadData"                      un-executed           0
+"41CA_UwbLidarDummyDtc_ReadData"                decision coverage      100.0%
+
+SignalMonitoringQM.c(1077):NetSigMonQM_DID_6FF5_UwbInvalidSignalValue_ReadData(
+Dem_EventIdType ,uint8 *)
+decision coverage details (with executed and un-executed cases)
+
+
+"UwbInvalidSignalValue_ReadData"                         executed           0
+"UwbInvalidSignalValue_ReadData"                      un-executed           0
+"UwbInvalidSignalValue_ReadData"                decision coverage      100.0%
+
+SignalMonitoringQM.c(1146):NetSigMonQM_DID_6FF7_UwbInvalidSignalPosition_ReadDa
+ta(Dem_EventIdType ,uint8 *)
+decision coverage details (with executed and un-executed cases)
+
+
+"InvalidSignalPosition_ReadData"                         executed           0
+"InvalidSignalPosition_ReadData"                      un-executed           0
+"InvalidSignalPosition_ReadData"                decision coverage      100.0%
+
+SignalMonitoringQM.c(1211):NetSigMonQM_DID_6FF8_UwbNotifierID_ReadData(Dem_Even
+tIdType ,uint8 *)
+decision coverage details (with executed and un-executed cases)
+
+
+"ID_6FF8_UwbNotifierID_ReadData"                         executed           0
+"ID_6FF8_UwbNotifierID_ReadData"                      un-executed           0
+"ID_6FF8_UwbNotifierID_ReadData"                decision coverage      100.0%
+
+SignalMonitoringQM.c(1285):NetSigMonQM_EcuHeartBeat()
+decision coverage details (with executed and un-executed cases)
+
+
+"NetSigMonQM_EcuHeartBeat"                               executed           0
+"NetSigMonQM_EcuHeartBeat"                            un-executed           0
+"NetSigMonQM_EcuHeartBeat"                      decision coverage      100.0%
+
+SignalMonitoringQM.c(1335):NetSigMonQM_Init()
+decision coverage details (with executed and un-executed cases)
+
+
+"NetSigMonQM_Init"                                       executed           0
+"NetSigMonQM_Init"                                    un-executed           0
+"NetSigMonQM_Init"                              decision coverage      100.0%
+
+SignalMonitoringQM.c(1495):NetSigMonQM_MainFunction()
+decision coverage details (with executed and un-executed cases)
+
+lMonitoringQM.c(1512):       decn   1 (if)     branch TRUE                  1
+lMonitoringQM.c(1516):       decn   1 (if)     branch FALSE                 1
+
+"NetSigMonQM_MainFunction"                               executed           2
+"NetSigMonQM_MainFunction"                            un-executed           0
+"NetSigMonQM_MainFunction"                      decision coverage      100.0%
+
+SignalMonitoringQM.c(1577):NetSigMonQM_VehicleStatusCall_1sec()
+decision coverage details (with executed and un-executed cases)
+
+
+"igMonQM_VehicleStatusCall_1sec"                         executed           0
+"igMonQM_VehicleStatusCall_1sec"                      un-executed           0
+"igMonQM_VehicleStatusCall_1sec"                decision coverage      100.0%
+
+CDD_Scmt.h(48):Scmt_Tick2Ms(uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"Scmt_Tick2Ms"                                           executed           0
+"Scmt_Tick2Ms"                                        un-executed           0
+"Scmt_Tick2Ms"                                  decision coverage      100.0%
+
+CDD_Scmt.h(54):Scmt_Tick2Us100(uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"Scmt_Tick2Us100"                                        executed           0
+"Scmt_Tick2Us100"                                     un-executed           0
+"Scmt_Tick2Us100"                               decision coverage      100.0%
+
+vIKE_Priv.h(1429):vIKE_ByteSwap16(uint16 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_ByteSwap16"                                        executed           0
+"vIKE_ByteSwap16"                                     un-executed           0
+"vIKE_ByteSwap16"                               decision coverage      100.0%
+
+vIKE_Priv.h(1441):vIKE_ByteSwap32(uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_ByteSwap32"                                        executed           0
+"vIKE_ByteSwap32"                                     un-executed           0
+"vIKE_ByteSwap32"                               decision coverage      100.0%
+
+vIKE_Priv.h(1380):vIKE_GetUint16(const uint8 *,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_GetUint16"                                         executed           0
+"vIKE_GetUint16"                                      un-executed           0
+"vIKE_GetUint16"                                decision coverage      100.0%
+
+vIKE_Priv.h(1395):vIKE_GetUint32(const uint8 *,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_GetUint32"                                         executed           0
+"vIKE_GetUint32"                                      un-executed           0
+"vIKE_GetUint32"                                decision coverage      100.0%
+
+vIKE_Priv.h(1411):vIKE_GetUint64(const uint8 *,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_GetUint64"                                         executed           0
+"vIKE_GetUint64"                                      un-executed           0
+"vIKE_GetUint64"                                decision coverage      100.0%
+
+vIKE_Priv.h(1365):vIKE_GetUint8(const uint8 *,uint32_least )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_GetUint8"                                          executed           0
+"vIKE_GetUint8"                                       un-executed           0
+"vIKE_GetUint8"                                 decision coverage      100.0%
+
+vIKE_Priv.h(1309):vIKE_PutUint16(uint8 *,uint32_least ,uint16 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_PutUint16"                                         executed           0
+"vIKE_PutUint16"                                      un-executed           0
+"vIKE_PutUint16"                                decision coverage      100.0%
+
+vIKE_Priv.h(1325):vIKE_PutUint32(uint8 *,uint32_least ,uint32 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_PutUint32"                                         executed           0
+"vIKE_PutUint32"                                      un-executed           0
+"vIKE_PutUint32"                                decision coverage      100.0%
+
+vIKE_Priv.h(1343):vIKE_PutUint64(uint8 *,uint32_least ,uint64 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_PutUint64"                                         executed           0
+"vIKE_PutUint64"                                      un-executed           0
+"vIKE_PutUint64"                                decision coverage      100.0%
+
+vIKE_Priv.h(1294):vIKE_PutUint8(uint8 *,uint32_least ,uint8 )
+decision coverage details (with executed and un-executed cases)
+
+
+"vIKE_PutUint8"                                          executed           0
+"vIKE_PutUint8"                                       un-executed           0
+"vIKE_PutUint8"                                 decision coverage      100.0%
+
+Summary by     EXECUTED     Overall                Statistics
+Coverage type  INFEASIBLES  (wavg)     avg /    min /    max /    dev /   num
+-----------------------------------------------------------------------------
+entry point            0    30.7%    30.7% /   0.0% / 100.0% /  46.7% /    39
+statement              0    42.5%    30.7% /   0.0% / 100.0% /  46.7% /    39
+decision               0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /    39
+-----------------------------------------------------------------------------
+
+
+------------------------- End Test: COVERAGE RULE SET
+
+EXPORT_COVERAGE: coverage data written to "test_SignalMonitoringQM.cov"
+===========================================================================
+= Test Finished: Mon May 23 14:52:47 2022                                 =
+=-------------------------------------------------------------------------=
+= Test                 Script  Checks  Checks  Checks  Call Seq     TEST  =
+= Case                 Errors  Failed  Passed  Warned  Failures    RESULT =
+=-------------------------------------------------------------------------=
+= SW4_16728565_NetSi        0       0      31       0         0      PASS =
+= SW4_16728567_NetSi        0       0      31       0         0      PASS =
+= SW4_16728569_NetSi        0       0      10       0         0      PASS =
+= SW4_16728571_NetSi        0       0      10       0         0      PASS =
+= SW4_16728573_NetSi        0       0       7       0         0      PASS =
+= SW4_16728575_NetSi        0       0       7       0         0      PASS =
+= SW4_16728577_NetSi        0       0       8       0         0      PASS =
+= SW4_16728579_NetSi        0       0       9       0         0      PASS =
+= SW4_16728581_NetSi        0       0       9       0         0      PASS =
+= SW4_16728583_NetSi        0       0      12       0         0      PASS =
+= SW4_16728585_NetSi        0       0       9       0         0      PASS =
+= SW4_16728587_NetSi        0       0       9       0         0      PASS =
+= SW4_16728589_NetSi        0       0       9       0         0      PASS =
+= SW4_16728591_NetSi        0       0       9       0         0      PASS =
+= SW4_16728593_NetSi        0       0       9       0         0      PASS =
+= SW4_16728595_NetSi        0       0       7       0         0      PASS =
+= SW4_16728597_NetSi        0       0       7       0         0      PASS =
+= SW4_16728599_NetSi        0       0       7       0         0      PASS =
+= COVERAGE RULE SET         0       2       1       0         0   >> FAIL =
+= Other                     0       0       0       0         0      PASS =
+=-------------------------------------------------------------------------=
+= TOTALS                    0       2     201       0         0   >> FAIL =
+===========================================================================

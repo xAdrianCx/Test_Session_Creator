@@ -1,0 +1,2603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Test Configuration 2</title>
+    <style type="text/css">
+      
+       
+      
+      @media screen
+      {
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+      }
+  
+      
+      @media print
+      {
+        
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+        
+        
+        a
+        {
+          text-decoration: none;
+        }
+        
+        
+        .HeadingTable, .SubHeadingTable, .GroupHeadingTable , .GroupEndTable
+        {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .ResultBlockHeading
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        table.ResultTable, table.OverviewTable, table.CheckStatisticsTable
+        {
+          border-collapse: collapse;
+        }
+        
+        td.DefaultCell, td.DefineCell, td.NumberCell, td.NumberCellPositiveResult, td.NumberCellNegativeResult, 
+        td.NumberCellErrorResult, td.NumberCellInconclusiveResult, td.NumberCellNoneResult, td.NumberCellNoColor,
+        td.PositiveResultCell, td.NegativeResultCell, td.WarningCell, td.NoneResultCell, td.InconclusiveResultCell,
+        td.ErrorResultCell, th.TableHeadingCell
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .PatternSeparator
+        {
+          
+          border-style: none;
+        }
+        
+        .PositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NoneResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .InconclusiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .ErrorResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+
+        
+        .TestcaseHeadingDefaultResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingPositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingNegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        table.ScreenOnly, a.Undecorated, .LinkCell
+        {
+          display: none;
+        }
+      }
+      
+      a.Undecorated:hover 
+      {
+        color:red;
+      }
+      a.Undecorated
+      { 
+        text-decoration: none; 
+      }
+      
+      .NavStyle
+      {
+        background-color: rgb(220, 221, 222);
+      }
+      
+      td.LinkCell, td.UpCell
+      {
+        
+        width:              1px;
+        white-space:        nowrap;
+      }
+
+      
+      table
+      {
+        margin-bottom:    10px;
+        vertical-align:   top; 
+        border:           0;
+        border-spacing:   1px;
+        padding:          2px;
+      }
+      table.ScreenOnly
+      {
+        vertical-align: top; 
+        margin-bottom:  10px;
+      }
+      .NoMarginBottom
+      {
+        margin-bottom:    0px;
+      }
+      .HeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    30px;
+        margin-left:      auto;
+        margin-right:     auto;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .SubHeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    25px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .GroupHeadingTable, .GroupEndTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        padding-right:    20px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .DefaultTable
+      {
+        padding:        0px;
+        border-spacing: 0px;
+      }
+      
+      .CheckStatisticsTable
+      {
+        margin-bottom: 8px;
+        padding-right:  20px;
+      }
+  
+      .OverviewTable
+      {
+        text-align:     left;
+      }
+      
+      .OverviewResultTable
+      {
+        width:          100%;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+        padding:        0px;
+        text-align:     center;
+      }
+      
+      .ResultTable
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  20px;
+      }
+      
+      .ResultTableInner
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+      }
+  
+      table.ResultTable td, table.ChildLinkTable td
+      {
+        vertical-align: top;
+      }
+      .ChildLinkTable
+      {
+        width:          1px;
+        text-align:     left;
+      }
+      .InfoTable
+      {
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .InfoTableExpand
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .OverallResultTable
+      {
+        width:         50%;
+        text-align:    center;
+        margin-bottom: 20px;
+        margin-left:   auto;
+        margin-right:  auto;
+        font-weight:   bold;
+      }
+      
+      .TableHeadingCell
+      {
+        background-color: rgb(179, 179, 179);
+        font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        font-weight:      bold;
+        text-align:       center;
+      }
+  
+      .CellNoColor
+      {
+        text-align:     left;
+        vertical-align: top;
+      }   
+      
+      .DefineCell
+      {
+        background-color: rgb(179, 179, 179);
+        text-align:       left;
+      }
+      
+      .DefaultCell, .DefaultCellBold
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       left;
+      }
+      
+      .DefaultCellBold
+      {
+        font-weight:      bold;
+      }
+        
+      .NumberCell
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoColor
+      {        
+        text-align: center;
+      }
+      
+      .PositiveResultCell
+      {
+        background-color: rgb(25, 165, 88);
+      }
+    
+      .NegativeResultCell
+      {
+        background-color: rgb(240, 0, 0);
+      }
+      
+      .NoneResultCell
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      
+      .InconclusiveResultCell
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      
+      .ErrorResultCell
+      {
+        background-color: rgb(205, 0, 0);
+        white-space:        nowrap;
+      }
+
+      .WarningCell
+      {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .TestcaseHeadingDefaultResult
+      {
+        background-color: rgb(179, 179, 179);
+      }
+      .TestcaseHeadingPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+      }      
+      .TestcaseHeadingNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+      }      
+      .TestcaseHeadingNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      .TestcaseHeadingInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      .TestcaseHeadingErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+      }
+      
+      .PatternSeparator
+      {
+        height: 0.2em;
+      }
+      
+      .NegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .PositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .NoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .InconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .ErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      
+      
+      
+      .Heading1
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   26px;
+      }
+      
+      .Heading2
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   20px;
+      }
+      
+      .Heading3
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     18px;
+        margin-bottom: 20px;
+        margin-top:    20px;
+      }
+      
+      .Heading4
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     16px;
+        margin-top:    10px;
+        margin-bottom: 10px;
+      }
+      
+      
+      img
+      {
+        Margin-bottom: 10px;
+        Margin-right:  10px;
+      }
+      
+      
+      p
+      {
+        Margin-bottom: 20px;
+      }
+      
+      
+      .DefaultTableBackground
+      {
+        background-color: rgb(229, 229, 229);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NegativeResultBackground
+      {
+        background-color: rgb(240, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .PositiveResultBackground
+      {
+        background-color: rgb(25, 165, 88);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .WarningResultBackground
+      {
+        background-color: rgb(255, 255, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NoneResultBackground
+      {
+        background-color: rgb(105, 105, 105);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .InconclusiveResultBackground
+      {
+        background-color: rgb(255, 165, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .ErrorResultBackground
+      {
+        background-color: rgb(205, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .TestGroupHeadingBackground
+      {
+        background-color: rgb(179, 179, 179);
+      }
+    
+      
+      .Indentation
+      {
+        margin-left:  20px;
+      }
+    </style>
+    <script type="text/javascript">
+      var EXPANDED = '[−]';
+      var COLLAPSED = '[+]';
+      var VISIBLE = 'Visible';
+      var HIDDEN = 'Hidden';
+      var NONE = 'none';
+      var BLOCK = '';
+      function getDivId(id) { return 'div_' + id; }
+      function getLinkId(id) { return 'lnk_' + id; }
+      function getTableId(id) { return 'tbl_' + id; }
+      function getTbl2Id(id) { return 'tbl_t' + id; }
+      
+      
+      function switchText(oldText) { return oldText == COLLAPSED ? EXPANDED : COLLAPSED ; }
+      function getStyleFromText(linkText) { return linkText == COLLAPSED ? HIDDEN : VISIBLE; }
+      
+      function getElements(tagName, elementId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        var len = elm.length;
+        for (var i = 0; i < len; i++) 
+        {
+          var id = elm[i].id;
+          if (id && id.indexOf(elementId) == 0)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;
+      }
+      function matchElements(tagName, matchId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        for (var i = 0; i < elm.length; i++) 
+        {
+          var id = elm[i].id;
+          var tc = id.replace(/s[0-9]+\./, "");
+          if (tc && tc == matchId)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;  
+      }
+      function onoff(elm, style)
+      {
+        if(elm.style.display == NONE)
+        {
+          if(style == null || style == VISIBLE)
+            elm.style.display = BLOCK;
+        }
+        else
+        {
+          if(style == null || style == HIDDEN)
+            elm.style.display = NONE;
+        }
+      }
+      function switchTagStyle(tag, id, style)
+      {
+        var divs = getElements(tag, id);
+        for(var i = 0; i < divs.length; i++)
+          onoff(divs[i], style);
+      }
+      function switchRowStyle(tbl, style)
+      {
+        var rows = tbl.rows.length;
+        for(var rowIndex=0; rowIndex < rows; rowIndex++)
+        {
+          var row = tbl.rows[rowIndex];
+          if (row.id != "on")
+            onoff(row, style);
+        }
+      }
+      function switchTableRowStyle(tableId, style)
+      {
+        var tables = getElements('table', tableId);
+        for(var i = 0; i < tables.length; i++)
+          switchRowStyle(tables[i], style);
+      }
+      function switchLinkText(linkId, newText)
+      {
+        var link = getElements('a', linkId);
+        var len = link.length;
+        for(var i = 0; i < len; i++)
+        {
+          var lnk = link[i];
+          if(newText == null)
+          {
+            var oldText = lnk.text;
+            newText = switchText(oldText)
+          }
+          lnk.text = newText;
+        }
+      }
+      function switchTag(tag, id, text)
+      {
+        var style = getStyleFromText(text);
+        switchTagStyle(tag, id, style);
+      }
+      function switchTable(id)
+      {
+        switchLinkText(getTableId(id));
+        switchTableRowStyle(getTableId(id));
+      }
+      function switchDiv(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+      }      
+      function switchAll(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+        var style = getStyleFromText(text);
+        switchTableRowStyle(getTbl2Id(id), style);
+      }
+      function showTable(id)
+      {
+        var tableId = getTableId(id);
+        switchLinkText(tableId, EXPANDED);
+        switchTableRowStyle(tableId, VISIBLE);
+      }
+      function hideTable(id)
+      {
+        var tableId = getTableId(id);
+        switchTableRowStyle(tableId, HIDDEN);
+        switchLinkText(tableId, COLLAPSED);
+      }
+      function showDiv(id)
+      {
+        switchLinkText(getLinkId(id), EXPANDED);
+        switchTag('div', getDivId(id), EXPANDED);
+      }
+      function showTC(id)
+      {
+        var divId = getDivId(id);
+        var elms = matchElements('div', divId); 
+        if(elms != null && elms.length > 0)
+        {
+          id = elms[0].id.replace(getDivId(''), '');
+          showDiv(id);
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <a name="TOP"></a>
+    <table class="HeadingTable">
+      <tr>
+        <td>
+          <big class="Heading1">Report: Test Configuration 2</big>
+        </td>
+      </tr>
+    </table>
+    <center>
+      <table class="OverallResultTable">
+        <tr>
+          <td class="ErrorResult">Test finished with error in test system</td>
+        </tr>
+      </table>
+    </center>
+    <a name="GeneralTestInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">General Test Information</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <div class="Heading4">Tester</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Windows Login Name: </td>
+            <td class="CellNoColor">XTENV14.MEESYS</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Setup</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor">CANoe.Ethernet.AMD/XCP 11.0.96 (SP4)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Configuration: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Customer\AutoEthSim_2021_KW29_SP21_C11\ME_L2G8810_Lidar_SP2021_HwMacFilter_Caius_I340V6_SWIT_DataThrouput.cfg</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database Ethernet3 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Customer\AutoEthSim_2021_KW29_SP21_C11\Databases\MERGED_FBX412_SP2021_21KW29_V89_Ethernet3_V90_lokal.xml (2021-11-03 12:41:33)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_CanoeControl_2 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_CanoeControl_2.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Diagnosis_3 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Diagnosis_3.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_DltViewer42gen_XXXXXXXX on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_DltViewer42gen_XXXXXXXX.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_DltViewer_42 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_DltViewer_42.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_EtherStress_77 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_EtherStress_77.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_MeasurementSetupMapping_51 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_MeasurementSetupMapping_51.dbc (2021-11-03 12:38:03)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Relaycard_50 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Relaycard_50.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_VehicleInterface_1 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_VehicleInterface_1.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database ME_Xcp_15 on Ethernet1: </td>
+            <td class="CellNoColor">C:\Caius\Handover_stuff\I320v5\T\02_ProjectDependent\DBC\ME_Xcp_15.dbc (2021-11-03 12:38:04)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Diagnostic Description of LIDAR_01: </td>
+            <td class="CellNoColor">LIDAR_01, ODX:LIDAR_01*C:\Caius\Handover_stuff\I320v5\T\03_VariantDependent\Diagnostics\G070_DKC_LIDAR__01.002_004_001.pdx</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Configuration: </td>
+            <td class="CellNoColor">Test Configuration 2</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Windows Computer Name: </td>
+            <td class="CellNoColor">MEEDTXTENV14</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module SomeIP_IL: </td>
+            <td class="CellNoColor">SOME/IP Interaction Layer for CANoe, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\SomeIP_IL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module AVB_IL: </td>
+            <td class="CellNoColor">Vector CANoe/CANalyzer Runtime Kernel, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\RuntimeKernel.exe</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module Ethernet_IL: </td>
+            <td class="CellNoColor">Ethernet Interaction Layer for CANoe, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\Ethernet_IL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module J1939TestServiceLibraryNL: </td>
+            <td class="CellNoColor">J1939 Test Service Library for CANoe, Version 11.0.96.0, C:\Program Files\Vector CANoe 11.0\Exec32\J1939TestServiceLibraryNL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module CANstress_NL: </td>
+            <td class="CellNoColor">CANstress NodeLayer for CANoe Version 3.0.15, C:\Program Files\Vector CANoe 11.0\Exec32\CANstress_NL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module FRStressNL: </td>
+            <td class="CellNoColor">FRstress NL Version 1.0.27, C:\Program Files\Vector CANoe 11.0\Exec32\FRStressNL.dll</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module C2X_IL: </td>
+            <td class="CellNoColor">Car2x Interaction Layer for Vector CANalyzer.Car2x/CANoe.Car2x, Version 11.0.96, C:\Program Files\Vector CANoe 11.0\Exec32\C2X_IL.dll</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestOverview"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Overview</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <table class="DefaultTable">
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test begin: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:05:52</td>
+          <td class="CellNoColor">(logging timestamp 1003.089237)</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test end: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:06:35</td>
+          <td class="CellNoColor" nowrap>(logging timestamp 1046.289237)</td>
+        </tr>
+      </table>
+      <div class="Heading4">Statistics</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">Executed test cases </td>
+            <td class="NumberCell" width="60">2</td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases passed </td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases inconclusive</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases failed </td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell">0% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases with error in test system </td>
+            <td class="NumberCellErrorResult">2</td>
+            <td class="NumberCellErrorResult">100% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Number of failures outside of test cases</td>
+            <td class="NumberCell"></td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Inconclusive</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Fail</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell" style="text-indent: 20px;">Error in test system</td>
+            <td class="NumberCell">0</td>
+            <td class="NumberCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Not executed test cases </td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr class="DefaultCell" style="text-indent: 20px;">
+            <td colspan="3">Some elements were not executed because they were deactivated by the tester.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Results</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">1</td>
+            <td class="DefineCell">
+              <b>
+                <a href="#i__206895536_8">SW5_NewTests</a>
+              </b>
+            </td>
+            <td class="ErrorResultCell">error</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1.1</td>
+            <td class="DefaultCell">
+              <a href="#i__206895536_14">SW5_13575771_CDD_DataThroughput_WdgM_Checkpoint - CDD_DT_WdgM_DataThroughput_FirstChkpt_CheckpointReached</a>
+            </td>
+            <td class="ErrorResultCell">
+              <a href="#i__206895536_1515" onclick="showTC('1.1')">error in test system</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1.2</td>
+            <td class="DefaultCell">
+              <a href="#i__206895536_1649">SW5_13576686_CDD_DataThroughput_WdgM_Checkpoint - CDD_DT_WdgM_DataThroughput_SecondChkpt_CheckpointReached</a>
+            </td>
+            <td class="ErrorResultCell">
+              <a href="#i__206895536_2380" onclick="showTC('1.2')">error in test system</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13577486_CDD_DataThroughput_FastaManager - CDD_DT_LIDAR_DATA_RELEASED_DT_Obstacle_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13577622_CDD_DataThroughput_FastaManager - DT_PointCloudPlusIdx_DT_Obstacle_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13578294_CDD_DataThroughput_FastaManager - CDD_DT_LIDAR_SHUTDOWN_DT_Obstacle_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13578833_CDD_DataThroughput_FastaManager - CDD_DT_LIDAR_DATA_RELEASED_DT_Object_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13578959_CDD_DataThroughput_FastaManager - CDD_DT_LIDAR_SHUTDOWN_DT_Object_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13579009_CDD_DataThroughput_FastaManager - DT_ObjectListIdx_DT_Object_Active_Status</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefineCell"><b>CDD_DataThroughput_Shared</b></td>
+            <td class="DefineCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13743876_CDD_DLTA53_Dlt - DltControlService_SetLogLevel</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13744078_CDD_DLTA53_CDD_Iccom - P_Ch5_Send_Send</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13745716_CDD_DLTA53_Dlt - DLT_A53_Msg_Service_RegisterContext</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13764053_CDD_DLTA53_CDD_Iccom - P_Ch5Receive_Receive</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13748777_CDD_DLTA53_CDD_CoreDumpHandler - DLT_HyperFlash_Write_HyperFlashHandler</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13950245_CDD_DLTA53_CDD_Iccom - P_Ch6_Recive_Receive</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13764224_CDD_DLTA53_Dlt - DLT_A53_Msg_Service_SendLogMessage</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_14922989_CDD_UartHandler_SystemControlMngr - UartHdlr_NewEvent_UartEvent</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13957504_DebugFrame_NVM_Ext_NvmExt_Enabled_Write</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_14111358_DebugFrame_Rte_OsApplication_QM_Rte_Mode_AppMgr_StateChanged_state</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_14656976_StdDebugFrame_Dlt - DltSwcMessageService_4135_SendLogMessage</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_14674368_StdDebugFrame_Dlt - DltSwcMessageService_4135_RegisterContext</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_14548215_SystemControlMngr_CustRID - SysCtrl_GetVbat</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13581420_SystemControlMngr_Dlt - DltSwcMessageService_28_RegisterContext</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13582074_SystemControlMngr_SbcManager - ShutdownRequest_HardReset (e_Fault_Reset)</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13584677_SystemControlMngr_CDD_UartHandler - UartHdlr_GetStatus_Operation</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13584850_SystemControlMngr_CDD_UartHandler - UartHdlr_GetBufferRx_Operation</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13584961_SystemControlMngr_ErrorManager - SysCtrl_UartHdlr_NewEvent - ErrMgr_DiagnosticMonitor_SetEventStatus(EMC_Error_ID_0x2222, DEM_EVENT_STATUS_FAILED)</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13585660_SystemControlMngr_ErrorManager - SysCtrl_UartHdlr_NewEvent - ErrMgr_DiagnosticMonitor_SetEventStatus(EMC_Error_ID_0x2222, DEM_EVENT_STATUS_FAILED)</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13586009_SystemControlMngr_ErrorManager - SysCtrl_UartHdlr_NewEvent - ErrMgr_DiagnosticMonitor_SetEventStatus(EMC_Error_ID_0x2222, DEM_EVENT_STATUS_PASSED)</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13589885_SystemControlMngr_CDD_UartHandler - UartHdlr_SendFrame_UartHandler_SendFrame_REQ_SHUTDOWN</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13590213_SystemControlMngr_CDD_UartHandler - UartHdlr_SendFrame_UartHandler_SendFrame_REQ_ERROR</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13590296_SystemControlMngr_CDD_UartHandler - UartHdlr_SendFrame_UartHandler_SendFrame_REQ_ERROR</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13590886_SystemControlMngr_CDD_UartHandler - UartHdlr_SendFrame_UartHandler_SendFrame_REQ_ALIVEMSG</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefaultCell">SW5_13590936_SystemControlMngr_CDD_UartHandler - UartHdlr_SendFrame_UartHandler_SendFrame_REQ_OMENA_DIAGVOLTAGE</td>
+            <td class="DefaultCell">not executed</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"></td>
+            <td class="DefineCell"><b>SystemControlMngr_ErrorManager</b></td>
+            <td class="DefineCell">not executed</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestModuleInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Configuration Information</div>
+        </td>
+      </tr>
+    </table>
+    <a name="i__206895536_1"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <big class="Heading2">Test Case Details</big>
+        </td>
+      </tr>
+    </table>
+    <table class="GroupHeadingTable">
+      <tr height="20px"></tr>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1" href="javascript:switchAll('1',document.all['lnk_1'].text)">[−]</a>
+        </td>
+        <td>
+          <big class="Heading3">
+            <a name="i__206895536_8">1 Test Unit: SW5_NewTests</a>
+          </big>
+        </td>
+      </tr>
+      <tr height="20px"></tr>
+    </table>
+    <div id="div_1">
+      <div class="Heading4">General Information</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Name: </td>
+            <td class="CellNoColor">SW5_NewTests</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Description: </td>
+            <td class="CellNoColor"></td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor"></td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">File: </td>
+            <td class="CellNoColor">C:\Caius\SWIT\vTESTstudio_Project_new_tests_included\SW5_NewTests\SW5_NewTests.vtuexe</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Last modification: </td>
+            <td class="CellNoColor">2022-02-24, 03:03:53</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1.1" href="javascript:switchAll('1.1',document.all['lnk_1.1'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingErrorResult">
+          <big class="Heading3">1.1 <a name="i__206895536_14">SW5_13575771_CDD_DataThroughput_WdgM_Checkpoint - CDD_DT_WdgM_DataThroughput_FirstChkpt_CheckpointReached</a>: Error in test system</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1.1">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:05:52</td>
+            <td class="CellNoColor">(logging timestamp 1003.089237)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:06:13</td>
+            <td class="CellNoColor" nowrap>(logging timestamp 1024.689237)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('1.1_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('1.1_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="div_1.1">
+        <table class="TestGroupHeadingBackground">
+          <tr>
+            <td>
+              <big class="Heading3">Preparation of Test Case</big>
+            </td>
+          </tr>
+        </table>
+        <div class="Indentation">
+          <table class="ResultTable">
+            <tr>
+              <th class="TableHeadingCell" width="1px">Timestamp</th>
+              <th class="TableHeadingCell" width="1px">Test Step</th>
+              <th class="TableHeadingCell" width="auto">Description</th>
+              <th class="TableHeadingCell" width="1px">Result</th>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">1. SetRelayCardPort (): None</big>
+              </td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">2. ResetPowerSupplyRelayCard (): None</big>
+              </td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">3. Set: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1014.089237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.1_i__206895536_82" href="javascript:switchTable('1.1_i__206895536_82')">[−]</a>
+                      </td>
+                      <td>Stimulation of values</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.1_i__206895536_82">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Assigned</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_Default_SET_BOL_1'</td>
+                    <td class="DefaultCell">=</td>
+                    <td class="DefaultCell">1</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">4. Wait: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">Waited for 3.000 s</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">5. Set: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.1_i__206895536_190" href="javascript:switchTable('1.1_i__206895536_190')">[−]</a>
+                      </td>
+                      <td>Stimulation of values</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.1_i__206895536_190">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Assigned</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_SAWireHSFZ_SET_INT_1'</td>
+                    <td class="DefaultCell">=</td>
+                    <td class="DefaultCell">1</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">6. Await Value Match: Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell">Resume reason</td>
+              <td class="DefaultCell">Immediately resumed on setup of wait condition: Environment variable 'MEnv_SAWireHSFZ_GET_INT_1'</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">Waited for occurrence of 1 value condition.</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.1_i__206895536_290" href="javascript:switchTable('1.1_i__206895536_290')">[−]</a>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.1_i__206895536_290">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Reference value</td>
+                    <td class="DefineCell">Actual</td>
+                    <td class="DefineCell" width="1px">Result</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_SAWireHSFZ_GET_INT_1'</td>
+                    <td class="DefaultCell">==</td>
+                    <td class="DefaultCell">1</td>
+                    <td class="DefaultCell">1</td>
+                    <td class="PositiveResultCell">pass</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">7. Connect (node=localhost, packetLen=1024, port=20000): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Initialize connection to Lauterbach Trace32</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Connected to debugger</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">8. RunLauterbachCommand (commandStr=SYStem.Option WaitReset 150ms): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Running Lauterbach command:SYStem.Option WaitReset 150ms</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">T32 command run</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">9. RunLauterbachCommand (commandStr=Data.Load "S:\40_Release\Engineering\basevariant\input\Renesas_V3M\CuC\App\debug\WDGOFF\lidar-CuC-App.elf" /noCode): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Running Lauterbach command:Data.Load "S:\40_Release\Engineering\basevariant\input\Renesas_V3M\CuC\App\debug\WDGOFF\lidar-CuC-App.elf" /noCode</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">T32 command run</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">1. SetBreakpoint (sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=if ((SD_EVENT_HANDLER_RELEASED == BswM_SdEventHandlerState[DT_ServiceSubscriptionMap[ServiceIdx]]) || (0u != SoAd_GetModeOfSoConDyn(SoAd_GetSoConIdxOfSoConMap(DT_SomeIpCfgMap[ServiceIdx].SoConId)))), searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Placing breakpoint at next line from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Breakpoint set</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">2. ResetTargetDevice (): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1017.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Reset target device</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Reset target device</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">3. WaitForBreakpoint (timeout=10, sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=if ((SD_EVENT_HANDLER_RELEASED == BswM_SdEventHandlerState[DT_ServiceSubscriptionMap[ServiceIdx]]) || (0u != SoAd_GetModeOfSoConDyn(SoAd_GetSoConIdxOfSoConMap(DT_SomeIpCfgMap[ServiceIdx].SoConId)))), searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Waiting to reach specified breakpoint</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.389237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1021.989237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1022.289237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1022.589237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1022.889237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1023.189237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1023.489237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1023.789237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.389237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Source line number evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">4. EditVariableValue (varName=BswM_SdEventHandlerState[0], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">5. EditVariableValue (varName=BswM_SdEventHandlerState[1], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">6. EditVariableValue (varName=BswM_SdEventHandlerState[2], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">7. EditVariableValue (varName=BswM_SdEventHandlerState[3], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">8. EditVariableValue (varName=BswM_SdEventHandlerState[4], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">9. EditVariableValue (varName=BswM_SdEventHandlerState[5], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">10. EditVariableValue (varName=BswM_SdEventHandlerState[6], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">11. EditVariableValue (varName=BswM_SdEventHandlerState[7], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Writing variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable edited</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">12. EvalVariableValue (varName=BswM_SdEventHandlerState[0], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">13. EvalVariableValue (varName=BswM_SdEventHandlerState[1], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">14. EvalVariableValue (varName=BswM_SdEventHandlerState[2], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">15. EvalVariableValue (varName=BswM_SdEventHandlerState[3], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">16. EvalVariableValue (varName=BswM_SdEventHandlerState[4], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">17. EvalVariableValue (varName=BswM_SdEventHandlerState[5], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">18. EvalVariableValue (varName=BswM_SdEventHandlerState[6], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">19. EvalVariableValue (varName=BswM_SdEventHandlerState[0], lval=1, hval=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating variable value</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Variable value evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">20. RemoveBreakpoint (sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=if ((SD_EVENT_HANDLER_RELEASED == BswM_SdEventHandlerState[DT_ServiceSubscriptionMap[ServiceIdx]]) || (0u != SoAd_GetModeOfSoConDyn(SoAd_GetSoConIdxOfSoConMap(DT_SomeIpCfgMap[ServiceIdx].SoConId)))), searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Removing breakpoint from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Breakpoint removed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">21. SetBreakpoint (sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=DT_StartBufferTransfer(ServiceIdx, BufferIdx, NumberOfPackets);, searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Placing breakpoint at next line from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Breakpoint set</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">22. RunDebug (enableAltMode=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started debug session</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">23. WaitForBreakpoint (timeout=10, sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=DT_StartBufferTransfer(ServiceIdx, BufferIdx, NumberOfPackets);, searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Waiting to reach specified breakpoint</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Evaluating source line number</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Source line number evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">24. SetBreakpoint (sourceFilePath=CDD_DataThroughput, textToSearch=if ((ServiceIdx == DT_PointCloudPlusIdx) &amp;&amp; (BufferIdx == (DT_NUMBER_OF_DT_BUFFERS - 1u))), searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Placing breakpoint at next line from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr id="i__206895536_1515">
+            <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+            <td class="ErrorResultCell">Program violation</td>
+            <td class="ErrorResultCell">'ArgumentOutOfRangeException' occurred in the module mscorlib - Error message: startIndex cannot be larger than length of string.<br>Parameter name: startIndex - Throwing method: String.Substring</td>
+            <td class="ErrorResultCell">error</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1024.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Test aborted due to error in test system</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+        </table>
+      </div>
+      <div id="div_1.1">
+        <table class="TestGroupHeadingBackground">
+          <tr>
+            <td>
+              <big class="Heading3">Completion of Test Case</big>
+            </td>
+          </tr>
+        </table>
+        <div class="Indentation">
+          <table class="ResultTable">
+            <tr>
+              <th class="TableHeadingCell" width="1px">Timestamp</th>
+              <th class="TableHeadingCell" width="1px">Test Step</th>
+              <th class="TableHeadingCell" width="auto">Description</th>
+              <th class="TableHeadingCell" width="1px">Result</th>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">1. RemoveBreakpoints (): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Removing breakpoints</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Breakpoints removed</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">2. Disconnect (): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Terminate connection to Lauterbach Trace32</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1024.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Disconnected from debugger</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1.2" href="javascript:switchAll('1.2',document.all['lnk_1.2'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingErrorResult">
+          <big class="Heading3">1.2 <a name="i__206895536_1649">SW5_13576686_CDD_DataThroughput_WdgM_Checkpoint - CDD_DT_WdgM_DataThroughput_SecondChkpt_CheckpointReached</a>: Error in test system</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1.2">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:06:13</td>
+            <td class="CellNoColor">(logging timestamp 1024.689237)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2022-04-15 13:06:35</td>
+            <td class="CellNoColor" nowrap>(logging timestamp 1046.289237)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('1.2_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('1.2_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="div_1.2">
+        <table class="TestGroupHeadingBackground">
+          <tr>
+            <td>
+              <big class="Heading3">Preparation of Test Case</big>
+            </td>
+          </tr>
+        </table>
+        <div class="Indentation">
+          <table class="ResultTable">
+            <tr>
+              <th class="TableHeadingCell" width="1px">Timestamp</th>
+              <th class="TableHeadingCell" width="1px">Test Step</th>
+              <th class="TableHeadingCell" width="auto">Description</th>
+              <th class="TableHeadingCell" width="1px">Result</th>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">1. SetRelayCardPort (): None</big>
+              </td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">2. ResetPowerSupplyRelayCard (): None</big>
+              </td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">3. Set: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1035.689237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.2_i__206895536_1717" href="javascript:switchTable('1.2_i__206895536_1717')">[−]</a>
+                      </td>
+                      <td>Stimulation of values</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.2_i__206895536_1717">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Assigned</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_Default_SET_BOL_1'</td>
+                    <td class="DefaultCell">=</td>
+                    <td class="DefaultCell">1</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">4. Wait: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">Waited for 3.000 s</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="NoneResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">5. Set: None</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.2_i__206895536_1825" href="javascript:switchTable('1.2_i__206895536_1825')">[−]</a>
+                      </td>
+                      <td>Stimulation of values</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.2_i__206895536_1825">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Assigned</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_SAWireHSFZ_SET_INT_1'</td>
+                    <td class="DefaultCell">=</td>
+                    <td class="DefaultCell">1</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">6. Await Value Match: Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell">Resume reason</td>
+              <td class="DefaultCell">Immediately resumed on setup of wait condition: Environment variable 'MEnv_SAWireHSFZ_GET_INT_1'</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell">1</td>
+              <td class="DefaultCell">Waited for occurrence of 1 value condition.</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">
+                <table class="NoMarginBottom">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="Undecorated" id="tbl_1.2_i__206895536_1925" href="javascript:switchTable('1.2_i__206895536_1925')">[−]</a>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="InfoTableExpand" id="tbl_1.2_i__206895536_1925">
+                  <tr>
+                    <td class="DefineCell" style="text-indent: 0px;">Symbol</td>
+                    <td class="DefineCell">Op.</td>
+                    <td class="DefineCell">Reference value</td>
+                    <td class="DefineCell">Actual</td>
+                    <td class="DefineCell" width="1px">Result</td>
+                  </tr>
+                  <tr>
+                    <td class="DefaultCell" style="text-indent: 0px;">Environment variable 'MEnv_SAWireHSFZ_GET_INT_1'</td>
+                    <td class="DefaultCell">==</td>
+                    <td class="DefaultCell">1</td>
+                    <td class="DefaultCell">1</td>
+                    <td class="PositiveResultCell">pass</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">7. Connect (node=localhost, packetLen=1024, port=20000): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Initialize connection to Lauterbach Trace32</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Connected to debugger</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">8. RunLauterbachCommand (commandStr=SYStem.Option WaitReset 150ms): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Running Lauterbach command:SYStem.Option WaitReset 150ms</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">T32 command run</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">9. RunLauterbachCommand (commandStr=Data.Load "S:\40_Release\Engineering\basevariant\input\Renesas_V3M\CuC\App\debug\WDGOFF\lidar-CuC-App.elf" /noCode): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Running Lauterbach command:Data.Load "S:\40_Release\Engineering\basevariant\input\Renesas_V3M\CuC\App\debug\WDGOFF\lidar-CuC-App.elf" /noCode</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">T32 command run</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">1. SetBreakpoint (sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=DT_FinishBufferTransfer(ServiceIdx, BufferIdx);, searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Placing breakpoint at next line from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Breakpoint set</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">2. ResetTargetDevice (): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1038.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Reset target device</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1042.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Reset target device</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="PositiveResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">3. WaitForBreakpoint (timeout=10, sourceFilePath=CDD_DataThroughput_EthQueue, textToSearch=DT_FinishBufferTransfer(ServiceIdx, BufferIdx);, searchType=PartialLine, returnType=FirstFound, foundIndex=1, lineOffset=0): Passed</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1042.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Waiting to reach specified breakpoint</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1042.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1042.989237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1043.289237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1043.589237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1043.889237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1044.189237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1044.489237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1044.789237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1045.089237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1045.389237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1045.689237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1045.989237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Start debug session</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Source line number evaluation passed</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="PatternSeparator" colspan="4"></td>
+          </tr>
+          <tr class="NoneResultBackground">
+            <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+              <big class="Heading4">4. SetBreakpoint (sourceFilePath=CDD_DataThroughput, textToSearch=if ((ServiceIdx == DT_PointCloudPlusIdx) &amp;&amp; (BufferIdx == (DT_NUMBER_OF_DT_BUFFERS - 1u))), searchType=PartialLine, returnType=IndexBased, foundIndex=2, lineOffset=0): None</big>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Placing breakpoint at next line from source file</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr id="i__206895536_2380">
+            <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+            <td class="ErrorResultCell">Program violation</td>
+            <td class="ErrorResultCell">'ArgumentOutOfRangeException' occurred in the module mscorlib - Error message: startIndex cannot be larger than length of string.<br>Parameter name: startIndex - Throwing method: String.Substring</td>
+            <td class="ErrorResultCell">error</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">1046.289237</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Test aborted due to error in test system</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+        </table>
+      </div>
+      <div id="div_1.2">
+        <table class="TestGroupHeadingBackground">
+          <tr>
+            <td>
+              <big class="Heading3">Completion of Test Case</big>
+            </td>
+          </tr>
+        </table>
+        <div class="Indentation">
+          <table class="ResultTable">
+            <tr>
+              <th class="TableHeadingCell" width="1px">Timestamp</th>
+              <th class="TableHeadingCell" width="1px">Test Step</th>
+              <th class="TableHeadingCell" width="auto">Description</th>
+              <th class="TableHeadingCell" width="1px">Result</th>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">1. RemoveBreakpoints (): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Removing breakpoints</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Breakpoints removed</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+            <tr>
+              <td class="PatternSeparator" colspan="4"></td>
+            </tr>
+            <tr class="PositiveResultBackground">
+              <td style="text-indent: 20px;" class="ResultBlockHeading" colspan="4">
+                <big class="Heading4">2. Disconnect (): Passed</big>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Terminate connection to Lauterbach Trace32</td>
+              <td class="DefaultCell">-</td>
+            </tr>
+            <tr>
+              <td style="text-indent: 20px;" class="DefineCell">1046.289237</td>
+              <td class="NumberCell"></td>
+              <td class="DefaultCell">Disconnected from debugger</td>
+              <td class="PositiveResultCell">pass</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <table class="GroupEndTable">
+      <tr>
+        <td>End of Test Unit: SW5_NewTests</td>
+      </tr>
+    </table>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">End of Report</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
